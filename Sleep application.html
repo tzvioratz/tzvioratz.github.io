@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Sleepaway Camper Application - 2025</title>
+    <style>
+        /* CSS from the previous template for clean styling */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .form-section {
+            margin-bottom: 25px;
+            border: 1px solid #eee;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 4px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+            display: inline-block;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        
+        /* Layout for inline fields */
+        .inline, .inline-half, .inline-third {
+            display: inline-block;
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+        .inline-half { width: 49%; margin-right: 1%; }
+        .inline-third { width: 32%; margin-right: 1%; }
+
+        .radio-group label, .checkbox-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        
+        .disclaimer {
+            background-color: #ffeaea;
+            border-left: 5px solid red;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .fees-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .fees-table th, .fees-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .fees-table th {
+            background-color: #f2f2f2;
+        }
+        
+        /* Multi-step controls */
+        .form-step {
+            display: none;
+        }
+        .form-step.active {
+            display: block;
+        }
+        .nav-buttons {
+            margin-top: 20px;
+            text-align: right;
+        }
+        .nav-buttons button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background-color 0.3s;
+        }
+        .nav-buttons button:hover {
+            background-color: #0056b3;
+        }
+        
+        button[type="submit"] {
+            background-color: #28a745; /* Green for final submit */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 30px;
+            display: block;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #1e7e34;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .invalid {
+            border-color: red !important;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>SLEEPAWAY APPLICATION - 2025</h1>
+    <form id="applicationForm" method="POST" action="YOUR_SUBMISSION_ENDPOINT">
+
+        <div class="form-step active" data-step="1">
+            <h2>Step 1: General & Parent Information</h2>
+            
+            <div class="form-section">
+                <h3>Application Notes 🗒️</h3>
+                <div class="disclaimer">
+                    Applications will be processed within a few weeks. The camp fee must be submitted with the application. **DO NOT use this form for Day Camp.** 10th Graders seeking jobs must also submit the 10th grade job application upon request.
+                </div>
+                <p><strong>Camp Dates:</strong> Full Summer: June 26 – Aug. 20 | Visiting Day: July 6</p>
+            </div>
+
+            <div class="form-section">
+                <h3>Parent/Guardian Contact</h3>
+                <div class="inline-third"><label>Father's Title <select name="fatherTitle" required><option value="">Select</option><option value="Rabbi">Rabbi</option><option value="Mr.">Mr.</option><option value="Dr.">Dr.</option></select></label></div>
+                <div class="inline-third"><label>Mother's Title <select name="motherTitle" required><option value="">Select</option><option value="Reb.">Reb.</option><option value="Mrs.">Mrs.</option><option value="Dr.">Dr.</option></select></label></div>
+                <div style="clear: both;"></div>
+    
+                <div class="inline-third"><label>Father's Last Name <input type="text" name="fatherLastName" required /></label></div>
+                <div class="inline-third"><label>Father's First Name <input type="text" name="fatherFirstName" required /></label></div>
+                <div class="inline-third"><label>Mother's Name <input type="text" name="motherName" required /></label></div>
+    
+                <label>Home Address <input type="text" name="homeAddress" required /></label>
+                <div class="inline-third"><label>City <input type="text" name="homeCity" required /></label></div>
+                <div class="inline-third"><label>State <input type="text" name="homeState" required /></label></div>
+                <div class="inline-third"><label>ZIP Code <input type="text" name="homeZip" required /></label></div>
+    
+                <div class="inline-third"><label>Home Phone No. <input type="tel" name="homePhone" required /></label></div>
+                <div class="inline-third"><label>Father Cellular No. <input type="tel" name="fatherCell" required /></label></div>
+                <div class="inline-third"><label>Mother Cellular No. <input type="tel" name="motherCell" required /></label></div>
+    
+                <div class="inline-half"><label>Marital Status <input type="text" name="maritalStatus" required /></label></div>
+                <div class="inline-half"><label>Father's Shul <input type="text" name="fatherShul" required /></label></div>
+                
+                <label>E-Mail Address (ALL CORRESPONDENCE VIA EMAIL ONLY) <input type="email" name="email" required /></label>
+                
+                <div class="inline-half"><label>Summer Address <input type="text" name="summerAddress" /></label></div>
+                <div class="inline-half"><label>Summer Phone No. <input type="tel" name="summerPhone" /></label></div>
+                
+                <label>Emergency Contact: Name / Relationship / Phone Number <input type="text" name="emergencyContact" required /></label>
+            </div>
+
+            <div class="nav-buttons">
+                <button type="button" class="next-button">Next (Camper Info)</button>
+            </div>
+        </div>
+
+        <div class="form-step" data-step="2">
+            <h2>Step 2: Camper Information (Camper 1)</h2>
+            
+            <div class="form-section">
+                <h3>CAMPER 1 (Required)</h3>
+                
+                <div class="inline-third"><label>Camper's First Name <input type="text" name="camper1Name" placeholder="Name he would like to be called" required /></label></div>
+                <div class="inline-third"><label>Date of Birth <input type="date" name="camper1DOB" required /></label></div>
+                <div class="inline-third"><label>Age <input type="number" name="camper1Age" min="4" max="18" required /></label></div>
+                
+                <label>Applying For (Check One):</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="camper1Trip" value="1st Trip" required /> 1st Trip</label>
+                    <label><input type="radio" name="camper1Trip" value="2nd Trip" /> 2nd Trip</label>
+                    <label><input type="radio" name="camper1Trip" value="Full Summer" /> Full Summer</label>
+                </div>
+                
+                <div class="inline-third"><label>Yeshiva Grade (2024-2025) <input type="text" name="camper1YeshivaGrade" required /></label></div>
+                <div class="inline-third"><label>Rebbe's Name <input type="text" name="camper1RebbeName" required /></label></div>
+                <div class="inline-third"><label>Rebbe's Phone No. <input type="tel" name="camper1RebbePhone" required /></label></div>
+                
+                <label>Camper's Learning Level (One Check):</label>
+                <div class="radio-group" style="padding: 5px 0;">
+                    <label><input type="radio" name="camper1LearningLevel" value="חומש" required /> חומש</label>
+                    <label><input type="radio" name="camper1LearningLevel" value="חומש רש'י" /> חומש רש"י</label>
+                    <label><input type="radio" name="camper1LearningLevel" value="התחלת משניות" /> התחלת משניות</label>
+                    <label><input type="radio" name="camper1LearningLevel" value="משניות" /> משניות</label>
+                    <label><input type="radio" name="camper1LearningLevel" value="התחלת גמרא" /> התחלת גמרא</label>
+                    <label><input type="radio" name="camper1LearningLevel" value="גמ' רש'י" /> גמ' רש"י</label>
+                    <label><input type="radio" name="camper1LearningLevel" value="גמ' תוס'" /> גמ' תוס'</label>
+                    <label><input type="radio" name="camper1LearningLevel" value="גמ' מפרשים" /> גמ' מפרשים</label>
+                </div>
+                
+                <div class="inline-half"><label>Private Tutoring Requested (Subjects) <input type="text" name="camper1Tutoring" /></label></div>
+                <div class="inline-half"><label>Child Spent Last Summer At <input type="text" name="camper1LastSummerCamp" /></label></div>
+                
+                <label>Special Instructions (Medical, Allergies, Bedwetting or other) <textarea name="camper1SpecialInstructions"></textarea></label>
+                
+                <div class="checkbox-group" style="margin-top: 15px;">
+                    <label><input type="checkbox" name="camper1MasmideiTashbar" value="Yes" /> **8-11 GRADE ONLY:** Masmidei Tashbar ($250 per half summer)</label>
+                </div>
+                
+                <div class="inline-half"><label>Parent's Signature (Type Full Name) <input type="text" name="camper1ParentSignature" required /></label></div>
+                <div class="inline-half"><label>Camper's Signature (Type Full Name) <input type="text" name="camper1CamperSignature" required /></label></div>
+            </div>
+            
+            
+            <div class="nav-buttons">
+                <button type="button" class="back-button">Back (Parent Info)</button>
+                <button type="button" class="next-button">Next (Fees & Payment)</button>
+            </div>
+        </div>
+        
+        <div class="form-step" data-step="3">
+            <h2>Step 3: Fees and Payment 💰</h2>
+            
+            <div class="form-section">
+                <h3>Occupations</h3>
+                <label>Father's Occupation <input type="text" name="fatherOccupation" required /></label>
+                <div class="inline-half"><label>Firm Name <input type="text" name="fatherFirmName" /></label></div>
+                <div class="inline-half"><label>Business Telephone <input type="tel" name="fatherBusinessPhone" /></label></div>
+                <label>Business Address <input type="text" name="fatherBusinessAddress" /></label>
+                
+                <label>Mother's Occupation <input type="text" name="motherOccupation" required /></label>
+                <div class="inline-half"><label>Firm Name <input type="text" name="motherFirmName" /></label></div>
+                <div class="inline-half"><label>Business Telephone <input type="tel" name="motherBusinessPhone" /></label></div>
+                <label>Business Address <input type="text" name="motherBusinessAddress" /></label>
+            </div>
+
+            <div class="form-section">
+                <h3>Camp Fees</h3>
+                <table class="fees-table">
+                    <thead><tr><th>Program</th><th>Campers 4-8th Grade</th><th>Mechina / Mesivta 9-11th Grade</th></tr></thead>
+                    <tbody>
+                        <tr><td>Full Summer (8 weeks)</td><td>$4,850.00</td><td>$5,300.00</td></tr>
+                        <tr><td>1st Trip (4 weeks)</td><td>$2,500.00</td><td>$2,700.00</td></tr>
+                        <tr><td>2nd Trip (4 weeks)</td><td>$2,500.00</td><td>$2,700.00</td></tr>
+                    </tbody>
+                </table>
+                <p>**Payment Note:** All checks must be paid with American dollars and must be drawn from an American bank.</p>
+            </div>
+
+            <div class="form-section">
+                <h3>Credit Card Information (Optional)</h3>
+                <p>A processing fee of **$40 per half** - **$80 for whole summer** will be added if paying by credit card. 2% fee applies for partial payments/credits.</p>
+                
+                <div class="radio-group" style="margin-top: 10px;">
+                    <label><input type="radio" name="creditCardType" value="VISA" /> VISA</label>
+                    <label><input type="radio" name="creditCardType" value="MASTERCARD" /> MASTERCARD</label>
+                </div>
+
+                <label>Credit Card Number <input type="text" name="creditCardNumber" placeholder="XXXX XXXX XXXX XXXX" /></label>
+                <label>Name on Card <input type="text" name="cardName" /></label>
+                <div class="inline-half"><label>Expiration Date (MM/YY) <input type="text" name="cardExpiration" placeholder="MM/YY" /></label></div>
+                <div class="inline-half"><label>Security Code (CVV) <input type="text" name="cardCVV" /></label></div>
+                <label>Billing Address <input type="text" name="cardBillingAddress" /></label>
+                <label>ZIP Code <input type="text" name="cardBillingZip" /></label>
+                <label>CC Authorization Signature (Type Full Name) <input type="text" name="ccAuthorizationSignature" /></label>
+            </div>
+
+            <div class="nav-buttons">
+                <button type="button" class="back-button">Back (Camper Info)</button>
+                <button type="button" class="next-button">Next (Authorization)</button>
+            </div>
+        </div>
+        
+        <div class="form-step" data-step="4">
+            <h2>Step 4: Conditions & Authorization</h2>
+
+            <div class="form-section">
+                <h3>Enrollment & Refund Policy</h3>
+                <p>By signing below, you agree to the policies, including:</p>
+                <ul>
+                    <li>**Payment Deadline:** Payment must be completed by **May 2nd** (or sooner based on application date).</li>
+                    <li>**Cancellation:** Full loss of fee after May 2nd.</li>
+                    <li>**Trip Authorization:** Granting permission for trips, assuming inherent risk, and holding the Camp harmless in the event of injury.</li>
+                </ul>
+            </div>
+
+            <div class="form-section">
+                <h3>Agreement Signature</h3>
+                <p>I have read and agree to abide by the Conditions of Enrollment, Fees/Payments, and Refund Policy.</p>
+                <div class="inline-half"><label>Parent's Signature (Type Full Name) <input type="text" name="enrollmentParentSignature" required /></label></div>
+                <div class="inline-half"><label>Date <input type="date" name="enrollmentDate" required /></label></div>
+            </div>
+
+            <div class="nav-buttons">
+                <button type="button" class="back-button">Back (Fees & Payment)</button>
+            </div>
+            <button type="submit">Submit Application</button>
+        </div>
+
+        <p class="error" id="formError"></p>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentStep = 1;
+            const steps = document.querySelectorAll(".form-step");
+            const form = document.getElementById("applicationForm");
+            const errorBox = document.getElementById("formError");
+
+            function showStep(step) {
+                steps.forEach((stepDiv) => {
+                    stepDiv.classList.remove("active");
+                });
+                const nextStep = document.querySelector(`.form-step[data-step="${step}"]`);
+                if (nextStep) {
+                    nextStep.classList.add("active");
+                    window.scrollTo(0, 0); // Scroll to top of the form section
+                }
+            }
+
+            function validateStep(step) {
+                const stepDiv = document.querySelector(`.form-step[data-step="${step}"]`);
+                const requiredFields = stepDiv.querySelectorAll("[required]");
+                let allValid = true;
+                errorBox.textContent = "";
+
+                // Reset invalid class
+                requiredFields.forEach(field => field.classList.remove("invalid"));
+
+                for (let field of requiredFields) {
+                    // Check for general emptiness
+                    if (field.type === 'radio' || field.type === 'checkbox') {
+                        const name = field.name;
+                        const group = stepDiv.querySelector(`input[name="${name}"]:checked`);
+                        if (!group) {
+                             allValid = false;
+                             // We don't add 'invalid' to a single radio button, but show the error
+                             break;
+                        }
+                    } else if (!field.value.trim()) {
+                        field.classList.add("invalid");
+                        allValid = false;
+                    } else {
+                        // Simple email validation
+                        if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
+                            field.classList.add("invalid");
+                            allValid = false;
+                        }
+                    }
+                }
+
+                if (!allValid) {
+                    errorBox.textContent = "Please fill out all required fields in this section.";
+                    // Find the first invalid field and focus on it
+                    const firstInvalid = stepDiv.querySelector(".invalid");
+                    if (firstInvalid) {
+                        firstInvalid.focus();
+                    }
+                }
+
+                return allValid;
+            }
+
+            // Button handlers
+            form.addEventListener("click", function (e) {
+                if (e.target.classList.contains("next-button")) {
+                    e.preventDefault();
+                    if (validateStep(currentStep)) {
+                        currentStep++;
+                        showStep(currentStep);
+                    }
+                }
+
+                if (e.target.classList.contains("back-button")) {
+                    e.preventDefault();
+                    currentStep--;
+                    showStep(currentStep);
+                    errorBox.textContent = ""; // Clear error when moving back
+                }
+            });
+
+            // Final Submit Handler
+            form.addEventListener("submit", function(e) {
+                // Ensure the final step is validated before submission
+                if (!validateStep(currentStep)) {
+                    e.preventDefault();
+                }
+            });
+            
+            showStep(currentStep);
+        });
+    </script>
+</body>
+</html>
