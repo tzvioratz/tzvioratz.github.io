@@ -188,14 +188,14 @@
 
 <body>
     <h1>SLEEPAWAY APPLICATION - 2025</h1>
-    <form id="applicationForm" method="POST" action="https://47dmj2aevf.execute-api.us-east-1.amazonaws.com/submit">
+    <form id="applicationForm" method="POST" action="https://47dmj2aevf.execute-api.us-east-1.amazonaws.com/submit" novalidate>
         
         <div class="form-step active" data-step="1">
-            <input type="hidden" id="applicationType" name="applicationType" value="sleepaway">
+            <input type="hidden" id="application_Type" name="application_Type" value="sleepaway">
             <h2>Step 1: General & Parent Information</h2>
             
             <div class="form-section">
-                <h2>Application Notes 🗒️</h2>
+                <h2>Application Notes </h2>
                 <div class="disclaimer">
                     Applications will be processed within a few weeks. The camp fee must be submitted with the application. **DO NOT use this form for Day Camp.** 10th Graders seeking jobs must also submit the 10th grade job application upon request.
                 </div>
@@ -204,26 +204,27 @@
 
             <div class="form-section">
                 <h2>Family Information</h2>
-                <div class="inline-third"><label>Last Name <input type="text" name="GeneralInformation.LastName" required /></label></div>
-                <div class="inline-third"><label>Number of Children <input type="number" name="FamilyInformation.NumberOfchildren" required /></label></div>
-                <div class="inline-third"><label>Parents Marital Status<select id="maritalStatus" name="FamilyInformation.maritalStatus" size="1" required>
+                <div class="inline-third"><label>Last Name <input type="text" name="GeneralInformation_LastName" required /></label></div>
+                <div class="inline-third"><label>Number of Children <input type="number" name="FamilyInformation_NumberOfchildren" required /></label></div>
+                <div class="inline-third"><label>Parents Marital Status<select id="maritalStatus" name="FamilyInformation_maritalStatus" size="1" required>
                     <option></option>
                     <option value="Married">Married</option>
-                    <option value="Divorced">Divorced</option></select>
+                    <option value="Divorced">Divorced</option>
+                    <option value="Widowed">Widowed</option></select>
                 </label></div>
-                <div class="inline-third"><label>Family Shul <input type="text" name="FamilyInformation.Shul" required /></label></div>
-                <div class="inline-third"><label>Home Phone <input type="tel" name="ContactInformation.Phone.HomePhone" required /></label></div>
-                <div class="inline-third"><label>Email  <input type="email" name="ContactInformation.email" required /></label></div>
+                <div class="inline-third"><label>Family Shul <input type="text" name="FamilyInformation_Shul" required /></label></div>
+                <div class="inline-third"><label>Home Phone <input type="tel"  pattern="[0-9]{10}" name="ContactInformation_Phone_HomePhone" required /></label></div>
+                <div class="inline-third"><label>Email  <input type="email" name="ContactInformation_email" required /></label></div>
 
                 <div class="inline"></div><div class="inline"></div>
-                <div class="inline-third"><label>Father's Title <select name="FamilyInformation.FatherTitle" required><option value="">Select</option><option value="Rabbi">Rabbi</option><option value="Mr.">Mr.</option><option value="Dr.">Dr.</option></select></label></div>
-                <div class="inline-third"><label>Father's  Name <input type="text" name="FamilyInformation.FatherName" required /></label></div>
-                <div class="inline-third"><label>Father Cell <input type="tel" name="ContactInformation.Phone.FatherCell" required /></label></div>
+                <div class="inline-third"><label>Father's Title <select name="FamilyInformation_FatherTitle" required><option value="">Select</option><option value="Rabbi">Rabbi</option><option value="Mr">Mr</option><option value="Dr">Dr</option></select></label></div>
+                <div class="inline-third"><label>Father's  Name <input type="text" name="FamilyInformation_FatherName" required /></label></div>
+                <div class="inline-third"><label>Father Cell <input type="tel" pattern="[0-9]{10}"  name="ContactInformation_Phone_FatherCell" required /></label></div>
 
                 <div class="inline"></div><div class="inline"></div>
-                <div class="inline-third"><label>Mother's Title <select name="FamilyInformation.MotherTitle" required><option value="">Select</option><option value="Mrs.">Mrs.</option><option value="Dr.">Dr.</option></select></label></div>
-                <div class="inline-third"><label>Mother's Name <input type="text" name="FamilyInformation.MotherName" required /></label></div>
-                <div class="inline-third"><label>Mother Cell <input type="tel" name="ContactInformation.Phone.MotherCell" required /></label></div>
+                <div class="inline-third"><label>Mother's Title <select name="FamilyInformation_MotherTitle" required><option value="">Select</option><option value="Mrs">Mrs</option><option value="Dr">Dr</option></select></label></div>
+                <div class="inline-third"><label>Mother's Name <input type="text" name="FamilyInformation_MotherName" required /></label></div>
+                <div class="inline-third"><label>Mother Cell <input type="tel" name="ContactInformation_Phone_MotherCell" required /></label></div>
 
                 
             </div>
@@ -231,17 +232,17 @@
             
             <div class="form-section">
                 <h2>Occupation</h2>
-                <div class="inline-third"><label>Father's Occupation<input type="text" name="FamilyInformation.Occupation.Father.Occupation" required /></label></div>
-                <div class="inline-third"><label>Firm Name <input type="text" name="FamilyInformation.Ocupation.Father.Firm" /></label></div>
-                <div class="inline-third"><label>Business Phone <input type="tel" name="FamilyInformation.Ocupation.Father.Phone" /></label></div>
-                <div class="inline-third"><label>Business Address <input type="text" name="FamilyInformation.Ocupation.Father.Address" /></label></div>
+                <div class="inline-third"><label>Father's Occupation<input type="text" name="FamilyInformation_Occupation_Father_Occupation" required /></label></div>
+                <div class="inline-third"><label>Firm Name <input type="text" name="FamilyInformation_Ocupation_Father_Firm" /></label></div>
+                <div class="inline-third"><label>Business Phone <input type="tel" pattern="[0-9]{10}"  name="FamilyInformation_Ocupation_Father_Phone" /></label></div>
+                <div class="inline-third"><label>Business Address <input type="text" name="FamilyInformation_Ocupation_Father_Address" /></label></div>
             
                 <div class="inline"></div>
                 
-                <div class="inline-third"><label>Mother's Occupation <input type="text" name="FamilyInformation.Ocupation.Mother.Occupation" required /></label></div>
-                <div class="inline-third"><label>Firm Name <input type="text" name="FamilyInformation.Ocupation.Mother.Firm" /></label></div>
-                <div class="inline-third"><label>Business Telephone <input type="tel" name="FamilyInformation.Ocupation.Mother.Phone" /></label></div>
-                <div class="inline-third"><label>Business Address <input type="text" name="FamilyInformation.Ocupation.Mother.Address" /></label></div>
+                <div class="inline-third"><label>Mother's Occupation <input type="text" name="FamilyInformation_Ocupation_Mother_Occupation" required /></label></div>
+                <div class="inline-third"><label>Firm Name <input type="text" name="FamilyInformation_Ocupation_Mother_Firm" /></label></div>
+                <div class="inline-third"><label>Business Phone <input type="tel"  pattern="[0-9]{10}" name="FamilyInformation_Ocupation_Mother_Phone" /></label></div>
+                <div class="inline-third"><label>Business Address <input type="text" name="FamilyInformation_Ocupation_Mother_Address" /></label></div>
                 
             </div>
             
@@ -249,10 +250,10 @@
             <div class="form-section"> 
 
                 <h2>Home Address</h2>
-                <div class="inline"><label>Address <input type="text" name="ContactInformation.Address.Home.Address" required /></label></div>
+                <div class="inline"><label>Address <input type="text" name="ContactInformation_Address_Home_Address" required /></label></div>
                 
-                <div class="inline-third"><label>City <input type="text" name="ContactInformation.Address.home.City" required /></label></div>
-                <div class="inline-third"><label>State <select id="homeState" name="Address.homeState" size="1" required>
+                <div class="inline-third"><label>City <input type="text" name="ContactInformation_Address_home_City" required /></label></div>
+                <div class="inline-third"><label>State <select id="homeState" name="Address_homeState" size="1" required>
                 <option></option>
                 <option value="Alabama">Alabama</option>
                 <option value="Alaska">Alaska</option>
@@ -306,7 +307,7 @@
                 <option value="Wyoming">Wyoming</option></select>
               <br/>
             </label></div>
-                <div class="inline-third"><label>ZIP Code <input type="text" name="ContactInformation.Address.home.Zip" required /></label></div>
+                <div class="inline-third"><label>ZIP Code <input type="text" name="ContactInformation_Address_home_Zip" pattern="[0-9]{5}" Title="ZIP code must be 5 digits" required /></label></div>
             </div>
             
             
@@ -314,9 +315,9 @@
                 
                 <h2>Summer Address</h2>
                 
-                <div class="inline"><label>Address <input type="text" name="ContactInformation.Address.Summer.Address" /></label></div>
-                <div class="inline-third"><label>City <input type="text" name="ContactInformation.Address.Summer.City"  /></label></div>
-                <div class="inline-third"><label>State <select id="SummerState" name="ContactInformation.Address.Summer.State" size="1" >
+                <div class="inline"><label>Address <input type="text" name="ContactInformation_Address_Summer_Address" /></label></div>
+                <div class="inline-third"><label>City <input type="text" name="ContactInformation_Address_Summer_City"  /></label></div>
+                <div class="inline-third"><label>State <select id="SummerState" name="ContactInformation_Address_Summer_State" size="1" >
                 <option></option>
                 <option value="Alabama">Alabama</option>
                 <option value="Alaska">Alaska</option>
@@ -370,21 +371,21 @@
                 <option value="Wyoming">Wyoming</option></select>
               <br/>
             </label></div>
-                <div class="inline-third"><label>ZIP Code <input type="text" name="ContactInformation.Address.Summer.Zip"  /></label></div>
-                <div class="inline"><label>Summer Phone <input type="tel" name="ContactInformation.Phone.Summer" /></label></div>
+                <div class="inline-third"><label>ZIP Code <input type="number" pattern="[0-9]{5}" name="ContactInformation_Address_Summer_Zip"  /></label></div>
+                <div class="inline"><label>Summer Phone <input type="tel" pattern="[0-9]{10}" name="ContactInformation_Phone_Summer" /></label></div>
              
             </div>
             
             <div class="form-section">
                 <h2>Emergency Contact</h2>
-                <div class="inline-third"><label>Name<input type="text" name="ContactInformation.emergencyContact.Name" required /></label></div>
-                <div class="inline-third"><label>Phone Number <input type="tel" name="ContactInformation.emergencyContact.phone" required /></label></div>
-                <div class="inline-third"><label>Relationship<input type="text" name="ContactInformation.emergencyContact.Relationship" required /></label></div>
+                <div class="inline-third"><label>Name<input type="text" name="ContactInformation_emergencyContact_Name" required /></label></div>
+                <div class="inline-third"><label>Phone Number <input type="tel" pattern="[0-9]{10}" name="ContactInformation_emergencyContact_phone" required /></label></div>
+                <div class="inline-third"><label>Relationship<input type="text"  name="ContactInformation_emergencyContact_Relationship" required /></label></div>
 
             </div>
 
             <div class="nav-buttons">
-                <button type="button" class="next-button">Next (Camper Info)</button>
+                <button type="button" class="next-button">Next </button>
             </div>
         </div>
 
@@ -394,26 +395,26 @@
             <div class="form-section">
                 
                 <label>Applying For:</label>
-                <select name="GeneralInformation.Half" required><option value="">Select</option>
+                <select name="GeneralInformation_Half" required><option value="">Select</option>
                     <option value="1st Trip">1st Trip</option>
                     <option value="2nd Trip">2nd Trip</option>
                     <option value="Full Summer">Full Summer</option></select>
                 
                 
-                <div class="inline-third"><label>Camper's First Name <input type="text" name="GeneralInformation.FirstName" placeholder="Name he would like to be called" required /></label></div>
-                <div class="inline-third"><label>Date of Birth <input type="date" name="GeneralInformation.Birthday" required /></label></div>
-                <div class="inline-third"><label>Age <input type="number" name="GeneralInformation.Age" min="4" max="18" required /></label></div>
+                <div class="inline-third"><label>Camper's First Name <input type="text" name="GeneralInformation_FirstName" placeholder="Name he would like to be called" required /></label></div>
+                <div class="inline-third"><label>Date of Birth <input type="date" name="GeneralInformation_Birthday" required /></label></div>
+                <div class="inline-third"><label>Age <input type="number" name="GeneralInformation_Age" min="4" max="18" required /></label></div>
             </div>
             
             <div class="form-section">
                 
                 
-                <div class="inline-third"><label>Yeshiva Grade (2024-2025) <input type="text" name="YeshivaInformation.Grade" required /></label></div>
-                <div class="inline-third"><label>Rebbe's Name <input type="text" name="YeshivaInformation.Rebbe" required /></label></div>
-                <div class="inline-third"><label>Rebbe's Phone No. <input type="tel" name="YeshivaInformation.RebbePhone" required /></label></div>
+                <div class="inline-third"><label>Yeshiva Grade (2024-2025) <input type="text" name="YeshivaInformation_Grade" required /></label></div>
+                <div class="inline-third"><label>Rebbe's Name <input type="text" name="YeshivaInformation_Rebbe" required /></label></div>
+                <div class="inline-third"><label>Rebbe's Phone<input type="tel" pattern="[0-9]{10}" name="YeshivaInformation_RebbePhone" required /></label></div>
                 
                 <label>Camper's Learning Level</label>
-                <select name="YeshivaInformation.LearningLevel" required><option value="">Select</option>
+                <select name="YeshivaInformation_LearningLevel" required><option value="">Select</option>
                 <option value="גמ' מפרשים">גמ' מפרשים</option>
                 <option value="גמ' תוס'">גמ' תוס'</option>
                 <option value=" גמ' רש''י"> גמ' רש"י</option>
@@ -424,39 +425,39 @@
                 <option value="חומש">חומש</option></select>
                 
                 
-                <div class="inline"><label>Private Tutoring Requested (Subjects) <input type="text" name="YeshivaInformation.Tutoring" /></label></div>
+                <div class="inline"><label>Private Tutoring Requested (Subjects) <input type="text" name="YeshivaInformation_Tutoring" /></label></div>
             
                 <div class="tooltip"> 
                     <span class="tooltiptext">Extended learning after lunch and an extended night seder. A total of 1½ - 2 hours extra learning.</span>
                         <div class="checkbox-group" style="margin-top: 15px;" >
-                            <label><input type="checkbox" name="YeshivaInformation.Masmidei" value="Yes" /> **8-11 GRADE ONLY:** Masmidei Tashbar ($250 per half)</label>
+                            <label><input type="checkbox" name="YeshivaInformation_Masmidei" value="Yes" /> **8-11 GRADE ONLY:** Masmidei Tashbar ($250 per half)</label>
                         </div>
                 </div>
             </div>
             
             <div class="form-section">
                 
-                <div class="inline"><label>Child Spent Last Summer At <input type="text" name="GeneralInformation.Lastsummer" /></label></div>
+                <div class="inline"><label>Child Spent Last Summer At <input type="text" name="GeneralInformation_LastSummer" /></label></div>
                 
-                <label>Special Instructions (Medical, Allergies, Bedwetting or other) <textarea name="GeneralInformation.SpecialInstructions"></textarea></label>
+                <label>Special Instructions (Medical, Allergies, Bedwetting or other) <textarea name="GeneralInformation_SpecialInstructions"></textarea></label>
                
             </div>
             
             <div class="form-section">    
                 
-                <div class="inline-half"><label>Parent's Signature (Type Full Name) <input type="text" name="Signature.Parent" required /></label></div>
-                <div class="inline-half"><label>Camper's Signature (Type Full Name) <input type="text" name="Signature.Camper" required /></label></div>
+                <div class="inline-half"><label>Parent's Signature (Type Full Name) <input type="text" name="Signature_Parent" required /></label></div>
+                <div class="inline-half"><label>Camper's Signature (Type Full Name) <input type="text" name="Signature_Camper" required /></label></div>
             </div>
             
             
             <div class="nav-buttons">
-                <button type="button" class="back-button">Back (Parent Info)</button>
-                <button type="button" class="next-button">Next (Fees & Payment)</button>
+                <button type="button" class="back-button">Back </button>
+                <button type="button" class="next-button">Next </button>
             </div>
         </div>
         
         <div class="form-step" data-step="3">
-            <h2>Step 3: Fees and Payment 💰</h2>
+            <h2>Step 3: Fees and Payment </h2>
             
             
 
@@ -477,14 +478,14 @@
                 <h2>Credit Card Information (Optional)</h2>
                 <p>A processing fee of **$40 per half** - **$80 for whole summer** will be added if paying by credit card.<br>A 2% fee applies for partial payments or credits to your credit card.</p>
                 
-                <div class="inline-third"><label>Card Type <select name="CreditCard.Type" ><option value="">Select</option><option value="VISA">VISA</option><option value="MASTERCARD">MASTERCARD</option></select></label></div>
+                <div class="inline-third"><label>Card Type <select name="CreditCard_Type" ><option value="">Select</option><option value="VISA">VISA</option><option value="MASTERCARD">MASTERCARD</option></select></label></div>
                 <div class="inline"></div>
-                <div class="inline-half"><label>Credit Card Number <input type="text" name="CreditCard.Number" placeholder="XXXX XXXX XXXX XXXX" /></label></div>
-                    <div class="inline-half"><label>Name on Card <input type="text" name="CreditCard.Name" /></label></div>
-                <div class="inline-half"><label>Expiration Date (MM/YY) <input type="text" name="CreditCard.Expiration" placeholder="MM/YY" /></label></div>
-                <div class="inline-half"><label>Security Code (CVV) <input type="text" name="CreditCard.CVV" /></label></div>
-                <label>Billing Address <input type="text" name="CreditCard.BillingAddress" /></label>
-                <label>ZIP Code <input type="text" name="CreditCard.BillingZip" /></label>
+                <div class="inline-half"><label>Credit Card Number <input type="text" name="CreditCard_Number" placeholder="XXXX XXXX XXXX XXXX" /></label></div>
+                    <div class="inline-half"><label>Name on Card <input type="text" name="CreditCard_Name" /></label></div>
+                <div class="inline-half"><label>Expiration Date (MM/YY) <input type="text" name="CreditCard_Expiration" placeholder="MM/YY" /></label></div>
+                <div class="inline-half"><label>Security Code (CVV) <input type="text" name="CreditCard_CVV" /></label></div>
+                <label>Billing Address <input type="text" name="CreditCard_BillingAddress" /></label>
+                <label>ZIP Code <input type="text" pattern="[0-9]{5}" name="CreditCard_BillingZip" /></label>
             </div>
 
             <div class="nav-buttons">
@@ -536,8 +537,8 @@
             <div class="form-section">
                 <h2>Agreement Signature</h2>
                 <p>I have read and agree to abide by the Conditions of Enrollment, Fees/Payments, and Refund Policy.</p>
-                <div class="inline-half"><label>Parent's Signature (Type Full Name) <input type="text" name="enrollmentParentSignature" required /></label></div>
-                <div class="inline-half"><label>Date <input type="date" name="enrollmentDate" required /></label></div>
+                <div class="inline-half"><label>Parent's Signature (Type Full Name) <input type="text" name="enrollment_ParentSignature" required /></label></div>
+                <div class="inline-half"><label>Date <input type="date" name="enrollment_Date" required /></label></div>
             </div>
 
             <div class="nav-buttons">
@@ -548,96 +549,138 @@
 
         <p class="error" id="formError"></p>
     </form>
+    
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
+    let currentStep = 1;
+    const steps = document.querySelectorAll(".form-step");
+    const form = document.getElementById("applicationForm");
+    const errorBox = document.getElementById("formError");
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let currentStep = 1;
-            const steps = document.querySelectorAll(".form-step");
-            const form = document.getElementById("applicationForm");
-            const errorBox = document.getElementById("formError");
+    // --- Live formatting for phone numbers ---
+    const phoneFields = document.querySelectorAll('input[type="tel"]');
+    phoneFields.forEach(input => {
+        input.addEventListener('input', function(e) {
+             const raw = input.value.replace(/\D/g, '').slice(0, 10); // keep only digits
+            let formatted = '';
 
-            function showStep(step) {
-                steps.forEach((stepDiv) => {
-                    stepDiv.classList.remove("active");
-                });
-                const nextStep = document.querySelector(`.form-step[data-step="${step}"]`);
-                if (nextStep) {
-                    nextStep.classList.add("active");
-                    window.scrollTo(0, 0); // Scroll to top of the form section
-                }
+            if (raw.length > 6) {
+                formatted = `(${raw.slice(0,3)})-${raw.slice(3,6)}-${raw.slice(6)}`;
+            } else if (raw.length > 3) {
+                formatted = `(${raw.slice(0,3)})-${raw.slice(3)}`;
+            } else if (raw.length > 0) {
+                formatted = `(${raw}`;
             }
 
-            function validateStep(step) {
-                const stepDiv = document.querySelector(`.form-step[data-step="${step}"]`);
-                const requiredFields = stepDiv.querySelectorAll("[required]");
-                let allValid = true;
-                errorBox.textContent = "";
-
-                // Reset invalid class
-                requiredFields.forEach(field => field.classList.remove("invalid"));
-
-                for (let field of requiredFields) {
-                    // Check for general emptiness
-                    if (field.type === 'radio' || field.type === 'checkbox') {
-                        const name = field.name;
-                        const group = stepDiv.querySelector(`input[name="${name}"]:checked`);
-                        if (!group) {
-                             allValid = false;
-                             // We don't add 'invalid' to a single radio button, but show the error
-                             break;
-                        }
-                    } else if (!field.value.trim()) {
-                        field.classList.add("invalid");
-                        allValid = false;
-                    } else {
-                        // Simple email validation
-                        if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
-                            field.classList.add("invalid");
-                            allValid = false;
-                        }
-                    }
-                }
-
-                if (!allValid) {
-                    errorBox.textContent = "Please fill out all required fields in this section.";
-                    // Find the first invalid field and focus on it
-                    const firstInvalid = stepDiv.querySelector(".invalid");
-                    if (firstInvalid) {
-                        firstInvalid.focus();
-                    }
-                }
-
-                return allValid;
-            }
-
-            // Button handlers
-            form.addEventListener("click", function (e) {
-                if (e.target.classList.contains("next-button")) {
-                    e.preventDefault();
-                    if (validateStep(currentStep)) {
-                        currentStep++;
-                        showStep(currentStep);
-                    }
-                }
-
-                if (e.target.classList.contains("back-button")) {
-                    e.preventDefault();
-                    currentStep--;
-                    showStep(currentStep);
-                    errorBox.textContent = ""; // Clear error when moving back
-                }
-            });
-
-            // Final Submit Handler
-            form.addEventListener("submit", function(e) {
-                // Ensure the final step is validated before submission
-                if (!validateStep(currentStep)) {
-                    e.preventDefault();
-                }
-            });
-            
-            showStep(currentStep);
+            input.value = formatted;
+           
         });
-    </script>
+    });
+
+    // --- Live formatting & validation for ZIP codes ---
+    const zipInputs = document.querySelectorAll('input[name$="_Zip"]');
+    zipInputs.forEach(input => {
+        input.addEventListener('input', () => {
+            input.value = input.value.replace(/\D/g, ''); // digits only
+            if (input.value.length > 5) input.value = input.value.slice(0,5);
+
+            // Add live invalid class if not exactly 5 digits
+            if (input.value.length !== 5) {
+                input.classList.add("invalid");
+                errorBox.textContent = "Please enter a valid 5-digit ZIP code.";
+            } else {
+                input.classList.remove("invalid");
+                errorBox.textContent = "";
+            }
+        });
+    });
+
+    // --- Form step logic ---
+    function showStep(step) {
+        steps.forEach((stepDiv) => stepDiv.classList.remove("active"));
+        const nextStep = document.querySelector(`.form-step[data-step="${step}"]`);
+        if (nextStep) {
+            nextStep.classList.add("active");
+            window.scrollTo(0, 0);
+        }
+    }
+
+    function validateStep(step) {
+        const stepDiv = document.querySelector(`.form-step[data-step="${step}"]`);
+        const requiredFields = stepDiv.querySelectorAll("[required]");
+        let allValid = true;
+        errorBox.textContent = "";
+
+        requiredFields.forEach(field => field.classList.remove("invalid"));
+
+        for (let field of requiredFields) {
+            if (field.type === 'radio' || field.type === 'checkbox') {
+                const name = field.name;
+                const group = stepDiv.querySelector(`input[name="${name}"]:checked`);
+                if (!group) {
+                    allValid = false;
+                    break;
+                }
+            } else if (field.name.endsWith("_Zip")) {
+                // ZIP validation: must be exactly 5 digits
+                if (!/^\d{5}$/.test(field.value)) {
+                    field.classList.add("invalid");
+                    allValid = false;
+                }
+            } else if (field.type === 'tel') {
+                const digits = field.value.replace(/\D/g,'');
+                if (digits.length !== 10) {
+                    field.classList.add("invalid");
+                    allValid = false;
+                }
+            }else {
+                if (!field.checkValidity()) {
+                    field.classList.add("invalid");
+                    allValid = false;
+                }
+            }
+        }
+
+        if (!allValid) {
+            errorBox.textContent = "Please fill out all required fields in this section.";
+            const firstInvalid = stepDiv.querySelector(".invalid");
+            if (firstInvalid) firstInvalid.focus();
+        }
+
+        return allValid;
+    }
+
+    // --- Button handlers ---
+    form.addEventListener("click", function (e) {
+        if (e.target.classList.contains("next-button")) {
+            e.preventDefault();
+            if (validateStep(currentStep)) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        }
+
+        if (e.target.classList.contains("back-button")) {
+            e.preventDefault();
+            currentStep--;
+            showStep(currentStep);
+            errorBox.textContent = "";
+        }
+    });
+
+    // --- Final Submit Handler ---
+    form.addEventListener("submit", function(e) {
+        if (!validateStep(currentStep)) e.preventDefault();
+
+        // Send raw digits for phones
+        phoneFields.forEach(input => {
+            input.value = input.value.replace(/\D/g,'');
+        });
+    });
+
+    showStep(currentStep);
+});
+</script>
+
 </body>
 </html>

@@ -3,156 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Application Form</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-        background-color: #f8f9fa;
-        color: #333;
-      }
-
-      h1 {
-        text-align: center;
-        margin-bottom: 30px;
-      }
-
-      form {
-        background: #fff;
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        max-width: 800px;
-        margin: auto;
-      }
-
-      .form-section {
-        margin-bottom: 25px;
-      }
-
-      label {
-        display: block;
-        margin-top: 12px;
-        font-weight: bold;
-      }
-
-      input,
-      textarea,
-      select {
-        width: 100%;
-        padding: 10px;
-        margin-top: 4px;
-        box-sizing: border-box;
-        border: 1px solid #ccc;
-        border-radius: 8px; /* Rounded corners */
-        font-size: 14px;
-        transition: border-color 0.3s ease;
-      }
-
-      input:focus,
-      textarea:focus {
-        border-color: #007bff;
-        outline: none;
-      }
-
-      .inline {
-        display: inline-block;
-        width: 48%;
-      }
-      
-      .inline-half {
-        display: inline-block;
-        width: 50%;
-      }
-      
-      .inline-third {
-        display: inline-block;
-        width: 30%;
-      }
-
-      .error {
-        color: red;
-        font-size: 0.9em;
-        text-align: center;
-      }
-
-      .radio-group label {
-        display: inline;
-        margin-right: 15px;
-      }
-
-      .invalid {
-        border-color: red !important;
-      }
-
-      .error-msg {
-        color: red;
-        font-size: 0.8em;
-        margin-top: 2px;
-      }
-
-      button[type="submit"] {
-        background-color: #007bff;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        cursor: pointer;
-        margin-top: 20px;
-        display: block;
-        width: 100%;
-      }
-
-      button[type="submit"]:hover {
-        background-color: #0056b3;
-      }
-
-      button[type="button"] {
-        background-color: #007bff;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        cursor: pointer;
-        margin-top: 20px;
-        display: inline-block;
-        width: 50%;
-        ;
-      }
-
-      button[type="button" class="next-button"] {
-        background-color: #007bff;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        cursor: pointer;
-        margin-top: 20px;
-        display: flexbox;
-        display: inline-block;
-        width: 50%;
-        flex-direction: column;
-      }
-
-      .form-step {
-        display: none;
-      }
-
-      .form-step.active {
-        display: block;
-      }
-
-      .nav-buttons {
-        margin-top: 20px;
-        text-align: right;
-      }
-
-      .nav-buttons button {
-        margin-left: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
@@ -166,30 +17,30 @@
             <!-- This tells the universal Lambda function to save the data to the 'staff_app' table. -->
         <input type="hidden" id="application_type" name="application_type" value="staff_app">
         <h2>General Information</h2>
-        <label>What Half of the Summer are you Applying for?<select id="half" name="GeneralInformation.half" size="1" required>
+        <label>What Half of the Summer are you Applying for?<select id="half" name="General_Information.half" size="1" required>
                 <option></option>
                 <option value="First Half">First Half</option>
                 <option value="Second Half">Second Half</option>
                 <option value="Full Summer">Full Summer</option></select></label>
         <div class="form-section">
-          <label>What Job Are You Applying For? <input type="text" name="GeneralInformation.job" required /></label>
+          <label>What Job Are You Applying For? <input type="text" name="General_Information.job" required /></label>
           <div class="inline-third">
-            <label>Date of Birth <input type="date" name="GeneralInformation.dob" required /></label>
+            <label>Date of Birth <input type="date" name="General_Information.dob" required /></label>
           </div>
           <div class="inline-third">
-            <label>Age <input type="number" name="GeneralInformation.age" required min="0" /></label>
+            <label>Age <input type="number" name="General_Information.age" required min="0" /></label>
           </div>
         </div>
 
         <div class="form-section">
           <label>Full Name</label> <br />
           <div class="inline">
-            <input type="text" name="GeneralInformation.lastName" placeholder="Last" required />
+            <input type="text" name="General_Information.lastName" placeholder="Last" required />
           </div>
           <div class="inline">
-            <input type="text" name="GeneralInformation.firstName" placeholder="First" required />
+            <input type="text" name="General_Information.firstName" placeholder="First" required />
           </div>
-          <label>Social Security # <input type="text" name="GeneralInformation.ssn" required /></label>
+          <label>Social Security # <input type="text" name="General_Information.ssn" required /></label>
         </div>
 
         <div class="form-section">
@@ -273,7 +124,7 @@
           <div class="inline">
             <label>State <input type="text" name="Address.mailState" /></label>
           </div>
-          <label>Zip <input type="text" name="Address.mailZip" /></label>
+          <label>Zip <input type="text" name="Address.mailZip"  /></label>
         </div>
 
         <div class="nav-buttons">
@@ -336,33 +187,33 @@
         <div class="form-section">
           <h3>Experience</h3>
           <div class="inline-third">
-            <label>Camp #1 <input type="text" name="xp.camp1name" placeholder="Name" /></label>
+            <label>Camp #1 <input type="text" name="xp.camp1.name" placeholder="Name" /></label>
           </div>
           <div class="inline-third">
-            <label>  <input type="number" name="xp.camp1years" placeholder="Attended in years " /></label>
+            <label>  <input type="number" name="xp.camp1.years" placeholder="Attended in years " /></label>
           </div>
           <div class="inline-third">
-            <label> <input type="text" name="xp.camp1position" placeholder="Position" /></label>
+            <label> <input type="text" name="xp.camp1.position" placeholder="Position" /></label>
           </div>
           
            <div class="inline-third">
-            <label>Camp #2 <input type="text" name="xp.camp2name" placeholder="Name" /></label>
+            <label>Camp #2 <input type="text" name="xp.camp3.name" placeholder="Name" /></label>
           </div>
           <div class="inline-third">
-            <label> <input type="number" name="xp.camp2years" placeholder="Attended in years" /></label>
+            <label> <input type="number" name="xp.camp2.years" placeholder="Attended in years" /></label>
           </div>
           <div class="inline-third">
-            <label> <input type="text" name="xp.camp2position" placeholder="Position" /></label>
+            <label> <input type="text" name="xp.camp5.position" placeholder="Position" /></label>
           </div>
           
            <div class="inline-third">
-            <label>Camp #3 <input type="text" name="xp.camp3name" placeholder="Name" /></label>
+            <label>Camp #3 <input type="text" name="xp.camp3.name" placeholder="Name" /></label>
           </div>
           <div class="inline-third">
-            <label> <input type="number" name="xp.camp3years" placeholder="Attended in years" /></label>
+            <label> <input type="number" name="xp.camp3.years" placeholder="Attended in years" /></label>
           </div>
           <div class="inline-third">
-            <label> <input type="text" name="xp.camp3position" placeholder="Position" /></label>
+            <label> <input type="text" name="xp.camp3.position" placeholder="Position" /></label>
           </div>
 
           <label>Other Experience <textarea name="xp.otherExp"></textarea></label>
@@ -374,8 +225,18 @@
         
         <div class="form-section">
           <h3>References</h3>
-          <label>Reference #1 <input type="text" name="other.ref1" placeholder="Name / Title / Phone" required /></label>
-          <label>Reference #2 <input type="text" name="other.ref2" placeholder="Name / Title / Phone" required /></label>
+          <div class=inline-third>
+            <label>Reference #1 <input type="text" name="other.ref1.name" placeholder="Name" required /></label>
+            <label><input type="text" name="other.ref1.title" placeholder="Title" required /></label>
+            <label><input type="text" name="other.ref1.phone" placeholder="Phone" required /></label>
+          </div>
+          
+          <div class=inline-third>
+            <label>Reference #2 <input type="text" name="other.ref2.name" placeholder="Name" required /></label>
+            <label>  <input type="text" name="other.ref2.title" placeholder="Title" required /></label>
+            <label>  <input type="text" name="other.ref2.phone" placeholder="Phone" required /></label>
+          </div>
+          
         </div>
 
         <div class="nav-buttons">
@@ -431,10 +292,10 @@
         }
 
         // Validate SSN (must be 9 digits or in format XXX-XX-XXXX)
-        const ssn = form["GeneralInformation.ssn"].value.trim();
+        const ssn = form["General_Information.ssn"].value.trim();
         if (!/^\d{3}-\d{2}-\d{4}$/.test(ssn) && !/^\d{9}$/.test(ssn)) {
           e.preventDefault();
-          return showError("Please enter a valid SSN (XXX-XX-XXXX or 9 digits).", form["GeneralInformation.ssn"]);
+          return showError("Please enter a valid SSN (XXX-XX-XXXX or 9 digits).", form["General_Information.ssn"]);
         }
 
         // Validate phone numbers
@@ -456,7 +317,7 @@
         }
 
         // Validate names (only letters and spaces)
-        const nameFields = ["GeneralInformation.lastName", "GeneralInformation.firstName", "family.fatherName", "family.motherName", "yeshiva.rebbi"];
+        const nameFields = ["General_Information.lastName", "General_Information.firstName", "family.fatherName", "family.motherName", "yeshiva.rebbi"];
         for (let name of nameFields) {
           if (!/^[a-zA-Z\s'-]+$/.test(form[name].value)) {
             e.preventDefault();
@@ -533,7 +394,7 @@
       const form = document.getElementById("applicationForm");
 
       // Auto-format + validate SSN
-      form["GeneralInformation.ssn"].addEventListener("input", (e) => {
+      form["General_Information.ssn"].addEventListener("input", (e) => {
         e.target.value = formatSSN(e.target.value);
         const valid = /^\d{3}-\d{2}-\d{4}$/.test(e.target.value);
         validateField(e.target, valid, "SSN must be in XXX-XX-XXXX format");
@@ -571,7 +432,7 @@
       });
 
       // Name validation (letters, spaces, hyphens, apostrophes)
-      const nameFields = ["GeneralInformation.firstName", "GeneralInformation.lastName", "yeshiva.rebbi", "family.fatherName", "family.motherName"];
+      const nameFields = ["General_Information.firstName", "General_Information.lastName", "yeshiva.rebbi", "family.fatherName", "family.motherName"];
       nameFields.forEach((name) => {
         const field = form[name];
         field.addEventListener("input", (e) => {
@@ -581,7 +442,7 @@
       });
 
       // Age check
-      form["GeneralInformation.age"].addEventListener("input", (e) => {
+      form["General_Information.age"].addEventListener("input", (e) => {
         const age = parseInt(e.target.value);
         const valid = age >= 14 && age <= 99;
         validateField(e.target, valid, "Age must be between 14–99");
