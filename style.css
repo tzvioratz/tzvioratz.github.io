@@ -1,0 +1,145 @@
+ body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      form {
+        background: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .form-section {
+        margin-bottom: 25px;
+      }
+
+      label {
+        display: block;
+        margin-top: 12px;
+        font-weight: bold;
+      }
+
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 4px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 8px; /* Rounded corners */
+        font-size: 14px;
+        transition: border-color 0.3s ease;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+
+      .inline {
+        display: inline-block;
+        width: 48%;
+      }
+      
+      .inline-half {
+        display: inline-block;
+        width: 48%;
+      }
+      
+      .inline-third {
+        display: inline-block;
+        width: 30%;
+      }
+
+      .error {
+        color: red;
+        font-size: 0.9em;
+        text-align: center;
+      }
+
+      .radio-group label {
+        display: inline;
+        margin-right: 15px;
+      }
+
+      .invalid {
+        border-color: red !important;
+      }
+
+      .error-msg {
+        color: red;
+        font-size: 0.8em;
+        margin-top: 2px;
+      }
+
+      button[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+        display: block;
+        width: 100%;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      button[type="button"] {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+        width: 48%
+
+        ;
+      }
+
+      button[type="button"].next-button {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+
+      }
+
+      .form-step {
+        display: none;
+      }
+
+      .form-step.active {
+        display: block;
+      }
+
+      .nav-buttons {
+        margin-top: 20px;
+        text-align: right;
+      }
+
+      .nav-buttons button {
+        margin-left: 10px;
+      }
