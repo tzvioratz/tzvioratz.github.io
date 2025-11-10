@@ -199,5 +199,5 @@ h1 img {
   width: 2.5em; /* Use 'em' to scale the image size relative to the H1 font size */
   height: auto;
   margin-right: 10px; /* Adds a small space between the image and the text */
-    vertical-align: middle;
+  vertical-align: middle;
 }
