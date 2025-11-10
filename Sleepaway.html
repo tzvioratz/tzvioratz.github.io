@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Sleepaway Camper Application - 2025</title>
+ <link rel="stylesheet" href="SharedStyle.css">
+</head>
+
+<body>
+    <h1>SLEEPAWAY APPLICATION - 2025</h1>
+    <form id="applicationForm" method="POST" action="https://47dmj2aevf.execute-api.us-east-1.amazonaws.com/submit" novalidate>
+        
+        <div class="form-step active" data-step="1">
+            <input type="hidden" id="application_Type" name="application_Type" value="sleepaway">
+            <h2>Step 1: General & Parent Information</h2>
+            
+            <div class="form-section">
+                <h2>Application Notes </h2>
+                <div class="disclaimer">
+                    Applications will be processed within a few weeks. The camp fee must be submitted with the application. **DO NOT use this form for Day Camp.** 10th Graders seeking jobs must also submit the 10th grade job application upon request.
+                </div>
+                <p><strong>Camp Dates:</strong> Full Summer: June 26 – Aug. 20 | Visiting Day: July 6</p>
+            </div>
+
+            <div class="form-section">
+                <h2>Family Information</h2>
+                <div class="inline-third"><label>Last Name <input type="text" name="GeneralInformation_LastName" required /></label></div>
+                <div class="inline-third"><label>Number of Children <input type="number" name="FamilyInformation_NumberOfchildren" required /></label></div>
+                <div class="inline-third"><label>Parents Marital Status<select id="maritalStatus" name="FamilyInformation_maritalStatus" size="1" required>
+                    <option></option>
+                    <option value="Married">Married</option>
+                    <option value="Divorced">Divorced</option>
+                    <option value="Widowed">Widowed</option></select>
+                </label></div>
+                <div class="inline-third"><label>Family Shul <input type="text" name="FamilyInformation_Shul" required /></label></div>
+                <div class="inline-third"><label>Home Phone <input type="tel"  pattern="[0-9]{10}" name="ContactInformation_Phone_HomePhone" required /></label></div>
+                <div class="inline-third"><label>Email  <input type="email" name="ContactInformation_email" required /></label></div>
+
+                <div class="inline"></div><div class="inline"></div>
+                <div class="inline-third"><label>Father's Title <select name="FamilyInformation_FatherTitle" required><option value="">Select</option><option value="Rabbi">Rabbi</option><option value="Mr">Mr</option><option value="Dr">Dr</option></select></label></div>
+                <div class="inline-third"><label>Father's  Name <input type="text" name="FamilyInformation_FatherName" required /></label></div>
+                <div class="inline-third"><label>Father Cell <input type="tel" pattern="[0-9]{10}"  name="ContactInformation_Phone_FatherCell" required /></label></div>
+
+                <div class="inline"></div><div class="inline"></div>
+                <div class="inline-third"><label>Mother's Title <select name="FamilyInformation_MotherTitle" required><option value="">Select</option><option value="Mrs">Mrs</option><option value="Dr">Dr</option><option value="Reb">Reb</option></select></label></div>
+                <div class="inline-third"><label>Mother's Name <input type="text" name="FamilyInformation_MotherName" required /></label></div>
+                <div class="inline-third"><label>Mother Cell <input type="tel" name="ContactInformation_Phone_MotherCell" required /></label></div>
+
+                
+            </div>
+                <div style="clear: both;"></div>
+            
+            <div class="form-section">
+                <h2>Occupation</h2>
+                <div class="inline-third"><label>Father's Occupation<input type="text" name="FamilyInformation_Occupation_Father_Occupation" required /></label></div>
+                <div class="inline-third"><label>Firm Name <input type="text" name="FamilyInformation_Ocupation_Father_Firm" /></label></div>
+                <div class="inline-third"><label>Business Phone <input type="tel" pattern="[0-9]{10}"  name="FamilyInformation_Ocupation_Father_Phone" /></label></div>
+                <div class="inline-third"><label>Business Address <input type="text" name="FamilyInformation_Ocupation_Father_Address" /></label></div>
+            
+                <div class="inline"></div>
+                
+                <div class="inline-third"><label>Mother's Occupation <input type="text" name="FamilyInformation_Ocupation_Mother_Occupation" required /></label></div>
+                <div class="inline-third"><label>Firm Name <input type="text" name="FamilyInformation_Ocupation_Mother_Firm" /></label></div>
+                <div class="inline-third"><label>Business Phone <input type="tel"  pattern="[0-9]{10}" name="FamilyInformation_Ocupation_Mother_Phone" /></label></div>
+                <div class="inline-third"><label>Business Address <input type="text" name="FamilyInformation_Ocupation_Mother_Address" /></label></div>
+                
+            </div>
+            
+               
+            <div class="form-section"> 
+
+                <h2>Home Address</h2>
+                <div class="inline"><label>Address <input type="text" name="ContactInformation_Address_Home_Address" required /></label></div>
+                
+                <div class="inline-third"><label>City <input type="text" name="ContactInformation_Address_home_City" required /></label></div>
+                <div class="inline-third"><label>State <select id="homeState" name="Address_homeState" size="1" required>
+                <option></option>
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Arkansas">Arkansas</option>
+                <option value="California">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Connecticut">Connecticut</option>
+                <option value="Delaware">Delaware</option>
+                <option value="Florida">Florida</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Hawaii">Hawaii</option>
+                <option value="Idaho">Idaho</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Indiana">Indiana</option>
+                <option value="Iowa">Iowa</option>
+                <option value="Kansas">Kansas</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="Louisiana">Louisiana</option>
+                <option value="Maine">Maine</option>
+                <option value="Maryland">Maryland</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Minnesota">Minnesota</option>
+                <option value="Mississippi">Mississippi</option>
+                <option value="Missouri">Missouri</option>
+                <option value="Montana">Montana</option>
+                <option value="Nebraska">Nebraska</option>
+                <option value="Nevada">Nevada</option>
+                <option value="New Hampshire">New Hampshire</option>
+                <option value="New Jersey">New Jersey</option>
+                <option value="New Mexico">New Mexico</option>
+                <option value="New York">New York</option>
+                <option value="North Carolina">North Carolina</option>
+                <option value="North Dakota">North Dakota</option>
+                <option value="Ohio">Ohio</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="Rhode Island">Rhode Island</option>
+                <option value="South Carolina">South Carolina</option>
+                <option value="South Dakota">South Dakota</option>
+                <option value="Tennessee">Tennessee</option>
+                <option value="Texas">Texas</option>
+                <option value="Utah">Utah</option>
+                <option value="Vermont">Vermont</option>
+                <option value="Virginia">Virginia</option>
+                <option value="Washington">Washington</option>
+                <option value="West Virginia">West Virginia</option>
+                <option value="Wisconsin">Wisconsin</option>
+                <option value="Wyoming">Wyoming</option></select>
+              <br/>
+            </label></div>
+                <div class="inline-third"><label>ZIP Code <input type="text" name="ContactInformation_Address_home_Zip" pattern="[0-9]{5}" Title="ZIP code must be 5 digits" required /></label></div>
+            </div>
+            
+            
+            <div class="form-section">
+                
+                <h2>Summer Address</h2>
+                
+                <div class="inline"><label>Address <input type="text" name="ContactInformation_Address_Summer_Address" /></label></div>
+                <div class="inline-third"><label>City <input type="text" name="ContactInformation_Address_Summer_City"  /></label></div>
+                <div class="inline-third"><label>State <select id="SummerState" name="ContactInformation_Address_Summer_State" size="1" >
+                <option></option>
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Arkansas">Arkansas</option>
+                <option value="California">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Connecticut">Connecticut</option>
+                <option value="Delaware">Delaware</option>
+                <option value="Florida">Florida</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Hawaii">Hawaii</option>
+                <option value="Idaho">Idaho</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Indiana">Indiana</option>
+                <option value="Iowa">Iowa</option>
+                <option value="Kansas">Kansas</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="Louisiana">Louisiana</option>
+                <option value="Maine">Maine</option>
+                <option value="Maryland">Maryland</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Minnesota">Minnesota</option>
+                <option value="Mississippi">Mississippi</option>
+                <option value="Missouri">Missouri</option>
+                <option value="Montana">Montana</option>
+                <option value="Nebraska">Nebraska</option>
+                <option value="Nevada">Nevada</option>
+                <option value="New Hampshire">New Hampshire</option>
+                <option value="New Jersey">New Jersey</option>
+                <option value="New Mexico">New Mexico</option>
+                <option value="New York">New York</option>
+                <option value="North Carolina">North Carolina</option>
+                <option value="North Dakota">North Dakota</option>
+                <option value="Ohio">Ohio</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="Rhode Island">Rhode Island</option>
+                <option value="South Carolina">South Carolina</option>
+                <option value="South Dakota">South Dakota</option>
+                <option value="Tennessee">Tennessee</option>
+                <option value="Texas">Texas</option>
+                <option value="Utah">Utah</option>
+                <option value="Vermont">Vermont</option>
+                <option value="Virginia">Virginia</option>
+                <option value="Washington">Washington</option>
+                <option value="West Virginia">West Virginia</option>
+                <option value="Wisconsin">Wisconsin</option>
+                <option value="Wyoming">Wyoming</option></select>
+              <br/>
+            </label></div>
+                <div class="inline-third"><label>ZIP Code <input type="number" pattern="[0-9]{5}" name="ContactInformation_Address_Summer_Zip"  /></label></div>
+                <div class="inline"><label>Summer Phone <input type="tel" pattern="[0-9]{10}" name="ContactInformation_Phone_Summer" /></label></div>
+             
+            </div>
+            
+            <div class="form-section">
+                <h2>Emergency Contact</h2>
+                <div class="inline-third"><label>Name<input type="text" name="ContactInformation_emergencyContact_Name" required /></label></div>
+                <div class="inline-third"><label>Phone Number <input type="tel" pattern="[0-9]{10}" name="ContactInformation_emergencyContact_phone" required /></label></div>
+                <div class="inline-third"><label>Relationship<input type="text"  name="ContactInformation_emergencyContact_Relationship" required /></label></div>
+
+            </div>
+
+            <div class="nav-buttons" >
+                <button type="button" class="next-button">Next </button>
+            </div>
+        </div>
+
+        <div class="form-step" data-step="2">
+            <h2>Step 2: Camper Information</h2>
+            
+            <div class="form-section">
+                
+                <label>Applying For:</label>
+                <select name="GeneralInformation_Half" required><option value="">Select</option>
+                    <option value="1st Trip">1st Trip</option>
+                    <option value="2nd Trip">2nd Trip</option>
+                    <option value="Full Summer">Full Summer</option></select>
+                
+                
+                <div class="inline-third"><label>Camper's First Name <input type="text" name="GeneralInformation_FirstName" placeholder="Name he would like to be called" required /></label></div>
+                <div class="inline-third"><label>Date of Birth <input type="date" name="GeneralInformation_Birthday" required /></label></div>
+                <div class="inline-third"><label>Age <input type="number" name="GeneralInformation_Age" min="4" max="18" required /></label></div>
+            </div>
+            
+            <div class="form-section">
+                
+                
+                <div class="inline-third"><label>Yeshiva Grade (2024-2025) <input type="text" name="YeshivaInformation_Grade" required /></label></div>
+                <div class="inline-third"><label>Rebbe's Name <input type="text" name="YeshivaInformation_Rebbe" required /></label></div>
+                <div class="inline-third"><label>Rebbe's Phone<input type="tel" pattern="[0-9]{10}" name="YeshivaInformation_RebbePhone" required /></label></div>
+                
+                <label>Camper's Learning Level</label>
+                <select name="YeshivaInformation_LearningLevel" required><option value="">Select</option>
+                <option value="גמ' מפרשים">גמ' מפרשים</option>
+                <option value="גמ' תוס'">גמ' תוס'</option>
+                <option value=" גמ' רש''י"> גמ' רש"י</option>
+                <option value="התחלת גמרא">התחלת גמרא</option>
+                <option value="משניות">משניות</option>
+                <option value="התחלת משניות">התחלת משניות</option>
+                <option value="חומש רש''י">חומש רש''י</option>
+                <option value="חומש">חומש</option></select>
+                
+                
+                <div class="inline"><label>Private Tutoring Requested (Subjects) <input type="text" name="YeshivaInformation_Tutoring" /></label></div>
+            
+                <div class="tooltip"> 
+                    <span class="tooltiptext">Extended learning after lunch and an extended night seder. A total of 1½ - 2 hours extra learning.</span>
+                        <div class="checkbox-group" style="margin-top: 15px;" >
+                            <label><input type="checkbox" name="YeshivaInformation_Masmidei" value="Yes" /> **8-11 GRADE ONLY:** Masmidei Tashbar ($250 per half)</label>
+                        </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                
+                <div class="inline"><label>Child Spent Last Summer At <input type="text" name="GeneralInformation_LastSummer" /></label></div>
+                
+                <label>Special Instructions (Medical, Allergies, Bedwetting or other) <textarea name="GeneralInformation_SpecialInstructions"></textarea></label>
+               
+            </div>
+            
+            <div class="form-section">    
+                
+                <div class="inline-half"><label>Parent's Signature (Type Full Name) <input type="text" name="Signature_Parent" required /></label></div>
+                <div class="inline-half"><label>Camper's Signature (Type Full Name) <input type="text" name="Signature_Camper" required /></label></div>
+            </div>
+            
+            
+            <div class="nav-buttons">
+                <button type="button" class="back-button">Back </button>
+                <button type="button" class="next-button">Next </button>
+            </div>
+        </div>
+        
+        <div class="form-step" data-step="3">
+            <h2>Step 3: Fees and Payment </h2>
+            
+            
+
+            <div class="form-section">
+                <h2>Camp Fees</h2>
+                <table class="fees-table">
+                    <thead><tr><th>Program</th><th>Campers <br>4-8th Grade</th><th>Mechina / Mesivta <br> 9-11th Grade</th><th>Masmidei Tashbar</th></tr></thead>
+                    <tbody>
+                        <tr><td>Full Summer (8 weeks)</td><td>$4,850.00</td><td>$5,300.00</td><td>+$500.00</td></tr>
+                        <tr><td>1st Trip (4 weeks)</td><td>$2,500.00</td><td>$2,700.00</td><td>+$250.00</td></tr>
+                        <tr><td>2nd Trip (4 weeks)</td><td>$2,500.00</td><td>$2,700.00</td><td>+$250.00</td></tr>
+                    </tbody>
+                </table>
+                <p>** All checks must be paid with American dollars and must be drawn from an American bank.</p>
+            </div>
+
+            <div class="form-section">
+                <h2>Credit Card Information (Optional)</h2>
+                <p>A processing fee of **$40 per half** - **$80 for whole summer** will be added if paying by credit card.<br>A 2% fee applies for partial payments or credits to your credit card.</p>
+                
+                <div class="inline-third"><label>Card Type <select name="CreditCard_Type" ><option value="">Select</option><option value="VISA">VISA</option><option value="MASTERCARD">MASTERCARD</option></select></label></div>
+                <div class="inline"></div>
+                <div class="inline-half"><label>Credit Card Number <input type="text" name="CreditCard_Number" placeholder="XXXX XXXX XXXX XXXX" /></label></div>
+                    <div class="inline-half"><label>Name on Card <input type="text" name="CreditCard_Name" /></label></div>
+                <div class="inline-half"><label>Expiration Date (MM/YY) <input type="text" name="CreditCard_Expiration" placeholder="MM/YY" /></label></div>
+                <div class="inline-half"><label>Security Code (CVV) <input type="text" name="CreditCard_CVV" /></label></div>
+                <label>Billing Address <input type="text" name="CreditCard_BillingAddress" /></label>
+                <label>ZIP Code <input type="text" pattern="[0-9]{5}" name="CreditCard_BillingZip" /></label>
+            </div>
+
+            <div class="nav-buttons">
+                <button type="button" class="back-button">Back (Camper Info)</button>
+                <button type="button" class="next-button">Next (Authorization)</button>
+            </div>
+        </div>
+        
+        <div class="form-step" data-step="4">
+            <h2>Step 4: Conditions & Authorization</h2>
+
+            <div class="form-section">
+            
+                <h2>PLEASE READ AND SIGN:</h2>
+                <h3>CONDITIONS OF ENROLLMENT</h3>
+                <p>I wish to enroll my son(s) and we agree to abide by all camp rules and regulations as well as the following conditions:</p>
+
+                <h4>FEES AND PAYMENTS - NO APPLICATION ACCEPTED WITHOUT APPLICABLE FEES</h4>
+
+                <ul>
+                  <li>Applications received until February 28th must be accompanied by a minimum deposit of $750.00 per camper. (NO postdated checks and NO Zelle for the deposit) Payment must be completed by May 2nd.</li>
+                  <li>Applications received from March 1st through April 10th must be accompanied by a minimum deposit of $1,500.00 per camper (NO postdated checks and NO Zelle for the deposit). Payment must be completed by May 2nd.</li>
+                  <li>Applications received after April 10th must be accompanied by full payment.</li>
+                  <li>Deposits cannot be Zelled. Once your son is accepted you can Zelle the additional payments to <a href="mailto:camptashbar@gmail.com">camptashbar@gmail.com</a>. Please include your son’s name and your Zelle address in the memo.</li>
+                  <li>A $25 fee will apply for bounced checks.</li>
+                  <li>Parents will be held responsible for any and all medical bills.</li>
+                  <li>Important: All parents are expected to follow the payment schedule above. Should a parent fail to pay after repeated billing and phone calls, camp will retain the services of a דין בית. Parents will be held responsible for all costs associated with collection of the camp fee. This includes but is not limited to all costs relating to דין בית, court fees, and a 20% of balance collection fee.</li>
+                </ul>
+
+                <h4>REFUND POLICY</h4>
+
+                <ul>
+                  <li>Deposit will be returned for cancellations until January 31st, with the exception of a $150 per child - application fee.</li>
+                  <li>Deposit will be returned for cancellations between February 1st and March 31st with the exception of $500.00 per child.</li>
+                  <li>Cancellations beginning April 1st will result in the loss of the entire $750.00 deposit.</li>
+                  <li>Cancellation after May 2nd, will result in the loss of the entire camp fee. NO EXCEPTIONS</li>
+                  <li>Any camper asked to leave camp during the summer will incur a minimum charge of $750.00 plus a pro-rated weekly fee for the time spent in camp. (Partial weeks will be charged for full week) Should he be asked to leave due to intolerable behavior (i.e. פה ניבול, drinking, smoking, vaping, etc.) the entire fee will be forfeited.</li>
+                  <li>Late arrivals, early departures, absences, or failure to cancel will not result in a refund or credit.</li>
+                </ul>
+
+                <h4>TRIP AUTHORIZATION / HOLD HARMLESS AGREEMENT:</h4>
+
+                <p>
+                I have read the Conditions of Enrollment including the Fees and Payments and Refund Policy. I agree to abide by these policies. I hereby authorize Camp Toras Chaim Tashbar (hereinafter Camp) to take my child(ren) off Camp grounds to go on trips organized as part of the camping program. This may include swimming and/or boating sites. In addition, my child(ren) may participate in any on or off ground activity organized by Camp, including but not limited to land sports, aquatics activities, indoor activities, bicycling, hiking, cookouts, etc., and I assume the inherent risk of such activities and camp programs. I will hold Camp harmless in the event of injury or property damage or loss as a result of such activities. I also agree to abide by all rules and regulations as set forth in the camp application, in the information packet and to all rules set by the camp administration, before and during the camp sessions.
+                </p>
+
+            </div>
+
+            <div class="form-section">
+                <h2>Agreement Signature</h2>
+                <p>I have read and agree to abide by the Conditions of Enrollment, Fees/Payments, and Refund Policy.</p>
+                <div class="inline-half"><label>Parent's Signature (Type Full Name) <input type="text" name="enrollment_ParentSignature" required /></label></div>
+                <div class="inline-half"><label>Date <input type="date" name="enrollment_Date" required /></label></div>
+            </div>
+
+            <div class="nav-buttons">
+                <button type="button" class="back-button">Back (Fees & Payment)</button>
+            </div>
+            <button type="submit">Submit Application</button>
+        </div>
+
+        <p class="error" id="formError"></p>
+    </form>
+    
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
+    let currentStep = 1;
+    const steps = document.querySelectorAll(".form-step");
+    const form = document.getElementById("applicationForm");
+    const errorBox = document.getElementById("formError");
+
+    // --- Live formatting for phone numbers ---
+    const phoneFields = document.querySelectorAll('input[type="tel"]');
+    phoneFields.forEach(input => {
+        input.addEventListener('input', function(e) {
+             const raw = input.value.replace(/\D/g, '').slice(0, 10); // keep only digits
+            let formatted = '';
+
+            if (raw.length > 6) {
+                formatted = `(${raw.slice(0,3)})-${raw.slice(3,6)}-${raw.slice(6)}`;
+            } else if (raw.length > 3) {
+                formatted = `(${raw.slice(0,3)})-${raw.slice(3)}`;
+            } else if (raw.length > 0) {
+                formatted = `(${raw}`;
+            }
+
+            input.value = formatted;
+           
+        });
+    });
+
+    // --- Live formatting & validation for ZIP codes ---
+    const zipInputs = document.querySelectorAll('input[name$="_Zip"]');
+    zipInputs.forEach(input => {
+        input.addEventListener('input', () => {
+            input.value = input.value.replace(/\D/g, ''); // digits only
+            if (input.value.length > 5) input.value = input.value.slice(0,5);
+
+            // Add live invalid class if not exactly 5 digits
+            if (input.value.length !== 5) {
+                input.classList.add("invalid");
+                errorBox.textContent = "Please enter a valid 5-digit ZIP code.";
+            } else {
+                input.classList.remove("invalid");
+                errorBox.textContent = "";
+            }
+        });
+    });
+
+    // --- Form step logic ---
+    function showStep(step) {
+        steps.forEach((stepDiv) => stepDiv.classList.remove("active"));
+        const nextStep = document.querySelector(`.form-step[data-step="${step}"]`);
+        if (nextStep) {
+            nextStep.classList.add("active");
+            window.scrollTo(0, 0);
+        }
+    }
+
+    function validateStep(step) {
+        const stepDiv = document.querySelector(`.form-step[data-step="${step}"]`);
+        const requiredFields = stepDiv.querySelectorAll("[required]");
+        let allValid = true;
+        errorBox.textContent = "";
+
+        requiredFields.forEach(field => field.classList.remove("invalid"));
+
+        for (let field of requiredFields) {
+            if (field.type === 'radio' || field.type === 'checkbox') {
+                const name = field.name;
+                const group = stepDiv.querySelector(`input[name="${name}"]:checked`);
+                if (!group) {
+                    allValid = false;
+                    break;
+                }
+            } else if (field.name.endsWith("_Zip")) {
+                // ZIP validation: must be exactly 5 digits
+                if (!/^\d{5}$/.test(field.value)) {
+                    field.classList.add("invalid");
+                    allValid = false;
+                }
+            } else if (field.type === 'tel') {
+                const digits = field.value.replace(/\D/g,'');
+                if (digits.length !== 10) {
+                    field.classList.add("invalid");
+                    allValid = false;
+                }
+            }else {
+                if (!field.checkValidity()) {
+                    field.classList.add("invalid");
+                    allValid = false;
+                }
+            }
+        }
+
+        if (!allValid) {
+            errorBox.textContent = "Please fill out all required fields in this section.";
+            const firstInvalid = stepDiv.querySelector(".invalid");
+            if (firstInvalid) firstInvalid.focus();
+        }
+
+        return allValid;
+    }
+
+    // --- Button handlers ---
+    form.addEventListener("click", function (e) {
+        if (e.target.classList.contains("next-button")) {
+            e.preventDefault();
+            if (validateStep(currentStep)) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        }
+
+        if (e.target.classList.contains("back-button")) {
+            e.preventDefault();
+            currentStep--;
+            showStep(currentStep);
+            errorBox.textContent = "";
+        }
+    });
+
+    // --- Final Submit Handler ---
+    form.addEventListener("submit", function(e) {
+        if (!validateStep(currentStep)) e.preventDefault();
+
+        // Send raw digits for phones
+        phoneFields.forEach(input => {
+            input.value = input.value.replace(/\D/g,'');
+        });
+    });
+
+    showStep(currentStep);
+});
+</script>
+
+</body>
+</html>
