@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Staff Application Form </title>
+    <link rel="icon" type="image/x-icon" href="/TCTcLOGO.png">
+    <link rel="stylesheet" href="SharedStyle.css">
+  </head>
+
+  <body>
+    <h1><img src="/TCTcLOGO.png" alt="TCTLOGO">Staff Application Form <img src="/TCTcLOGO.png" alt="TCTLOGO"></h1>
+    <form
+      id="applicationForm"
+      method="POST"
+      action="https://47dmj2aevf.execute-api.us-east-1.amazonaws.com/submit">
+      <div class="form-step active" data-step="1">
+         <!-- CRITICAL: HIDDEN INPUT FIELD -->
+            <!-- This tells the universal Lambda function to save the data to the 'staff_app' table. -->
+        <input type="hidden" id="application_type" name="application_type" value="staff_app">
+        <h2>General Information</h2>
+        
+        <div class="form-section">
+          <div class="inline"><label>What Half of the Summer are you Applying for?<select id="half" name="General_Information.half" size="1" required>
+                <option></option>
+                <option value="First Half">First Half</option>
+                <option value="Second Half">Second Half</option>
+          <option value="Full Summer">Full Summer</option></select></label></div>
+          
+          <div class="inline"><label> Job Are You Applying For <input type="text" name="General_Information.job" required /></label></div>
+          <div class="inline-third"><label>Date of Birth <input type="date" name="General_Information.dob" required /></label></div>
+          <div class="inline-third"><label>Age <input type="number" name="General_Information.age" required min="0" /></label></div>
+        
+        </div>
+
+        <div class="form-section">
+          
+          
+          <div class="inline-half"><label>First Name<input type="text" name="General_Information.firstName" placeholder="First" required /></label></div>
+            <div class="inline-half"><label>Last Name<input type="text" name="General_Information.lastName" placeholder="Last" required /></label></div>
+          <div class="inline"><label>Social Security # <input type="text" name="General_Information.ssn" required /></label></div>
+        
+        </div>
+
+        <div class="form-section">
+          <div class="inline"><label>Home Phone <input type="tel" name="ContactInformation.homePhone" required /></label></div>
+          <div class="inline"><label>Cell Phone <input type="tel" name="ContactInformation.cellPhone" required /></label></div>
+          <div class="inline"><label>Email <input type="email" name="ContactInformation.email" required /></label></div>
+        </div>
+        <div class="nav-buttons">
+          <button type="button" class="next-button">Next</button>
+        </div>
+      </div>
+      <div class="form-step" data-step="2">
+        <div class="form-section">
+          <div class="inline"><label>Home Address <input type="text" name="Address.homeAddress" required /></label></div>
+          <div class="inline-third"><label>City <input type="text" name="Address.homeCity" required /></label></div>
+          <div class="inline-third"><label>State<select id="homeState" name="Address.homeState" size="1" required>
+                <option></option>
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Arkansas">Arkansas</option>
+                <option value="California">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Connecticut">Connecticut</option>
+                <option value="Delaware">Delaware</option>
+                <option value="Florida">Florida</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Hawaii">Hawaii</option>
+                <option value="Idaho">Idaho</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Indiana">Indiana</option>
+                <option value="Iowa">Iowa</option>
+                <option value="Kansas">Kansas</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="Louisiana">Louisiana</option>
+                <option value="Maine">Maine</option>
+                <option value="Maryland">Maryland</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Minnesota">Minnesota</option>
+                <option value="Mississippi">Mississippi</option>
+                <option value="Missouri">Missouri</option>
+                <option value="Montana">Montana</option>
+                <option value="Nebraska">Nebraska</option>
+                <option value="Nevada">Nevada</option>
+                <option value="New Hampshire">New Hampshire</option>
+                <option value="New Jersey">New Jersey</option>
+                <option value="New Mexico">New Mexico</option>
+                <option value="New York">New York</option>
+                <option value="North Carolina">North Carolina</option>
+                <option value="North Dakota">North Dakota</option>
+                <option value="Ohio">Ohio</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="Rhode Island">Rhode Island</option>
+                <option value="South Carolina">South Carolina</option>
+                <option value="South Dakota">South Dakota</option>
+                <option value="Tennessee">Tennessee</option>
+                <option value="Texas">Texas</option>
+                <option value="Utah">Utah</option>
+                <option value="Vermont">Vermont</option>
+                <option value="Virginia">Virginia</option>
+                <option value="Washington">Washington</option>
+                <option value="West Virginia">West Virginia</option>
+                <option value="Wisconsin">Wisconsin</option>
+                <option value="Wyoming">Wyoming</option></select>
+              <br/>
+            </label>
+          </div>
+          <div class="inline-third"><label>Zip <input type="text" name="Address.homeZip" required /></label></div>
+        </div>
+        
+        <div class="form-section">
+          <div class="inline"><label>Mailing Address (if different) <input type="text" name="mailAddress" /></label></div>
+          <div class="inline-third"><label>City <input type="text" name="Address.mailCity" /></label></div>
+          <div class="inline-third"><label>State <input type="text" name="Address.mailState" /></label></div>
+            <div class="inline-third"><label>Zip <input type="text" name="Address.mailZip"  /></label></div>
+       
+            </div>
+
+        <div class="nav-buttons">
+          <button type="button" class="back-button">Back</button>
+          <button type="button" class="next-button">Next</button>
+        </div>
+      </div>
+
+      <div class="form-step" data-step="3">
+        <h2>Yeshiva Information</h2>
+
+        <div class="form-section">
+          
+          <div class="inline"><label>Yeshiva Attending <input type="text" name="yeshiva.yeshiva" required /></label></div>
+          <div class="inline-third"><label>Hebrew Grade <input type="text" name="yeshiva.hebrewGrade" required /></label></div>
+          <div class="inline-third"><label>English Grade <input type="text" name="yeshiva.englishGrade" required /></label></div>
+          <div class="inline-third"><label>Years in this Yeshiva <input type="number" name="yeshiva.yearsYeshiva" required /></label></div>
+          <div class="inline"><label>Rebbi's Name <input type="text" name="yeshiva.rebbi" required /></label></div>
+          <div class="inline"><label>Rebbi's Phone # <input type="tel" name="yeshiva.rebbiPhone" required /></label></div>
+          <div class="inline"><label>Previous Yeshivas (if less than 2 years) <textarea name="yeshiva.prevYeshivas"></textarea></label></div>
+       
+        </div>
+
+        <div class="nav-buttons">
+          <button type="button" class="back-button">Back</button>
+          <button type="button" class="next-button">Next</button>
+        </div>
+      </div>
+      <div class="form-step" data-step="4">
+        <h2>Family Information</h2>
+        <div class="form-section">
+          <div class="inline-third"><label>Father's Name <input type="text" name="family.fatherName" required /></label></div>
+          <div class="inline-third"><label>Occupation <input type="text" name="family.fatherOccupation" required /></label></div>
+          <div class="inline-third"><label> Cell <input type="tel" name="family.fatherCell" required /></label></div>
+
+          <div class="inline-third"><label>Mother’s Name <input type="text" name="family.motherName" required /></label></div>
+          <div class="inline-third"><label>Occupation <input type="text" name="family.motherOccupation" required /></label></div>
+          <div class="inline-third"><label>Mother’s Cell <input type="tel" name="family.motherCell" required /></label></div>
+
+          <div class="inline"><label>Parents Marital Status<select id="maritalStatus" name="family.maritalStatus" size="1" required>
+                <option></option>
+                <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+                <option value="Widowed">Widowed</option>
+            </select></label></div>
+          
+          <div class="inline"><label>Shul Name <input type="text" name="family.shul" required /></label></div>
+        </div>
+
+        <div class="nav-buttons">
+          <button type="button" class="back-button">Back</button>
+          <button type="button" class="next-button">Next</button>
+        </div>
+      </div>
+      <div class="form-step" data-step="5">
+        <h2>Prevous Experience</h2>
+        <div class="form-section">
+          <h3>Experience</h3>
+          <div class="inline-third"><label>Camp #1 <input type="text" name="xp.camp1.name" placeholder="Name" /></label></div>
+          <div class="inline-third"><label># of Years Attended<input type="number" name="xp.camp1.years" placeholder="Attended in years " /></label></div>
+            <div class="inline-third"><label>Position <input type="text" name="xp.camp1.position" placeholder="Position" /></label></div>
+          <div class="inline-third"><label>Camp #2 <input type="text" name="xp.camp3.name" placeholder="Name" /></label></div>
+          <div class="inline-third"><label># of Years Attended <input type="number" name="xp.camp2.years" placeholder="Attended in years" /></label></div>
+          <div class="inline-third"><label> Position<input type="text" name="xp.camp5.position" placeholder="Position" /></label></div>
+          <div class="inline-third"><label>Camp #3 <input type="text" name="xp.camp3.name" placeholder="Name" /></label></div>
+          <div class="inline-third"><label># of Years Attended <input type="number" name="xp.camp3.years" placeholder="Attended in years" /></label></div>
+          <div class="inline-third"><label> Position<input type="text" name="xp.camp3.position" placeholder="Position" /></label></div>
+
+          <div class="inline"><label>Other Experience <textarea name="xp.otherExp"></textarea></label></div>
+
+          <div class="inline"><label>Skills, Talents, and Competency Level <textarea name="xp.skills" required></textarea></label></div></div>
+        
+        <div class="form-section">
+          <h3>References</h3>
+            
+          <div class="inline-third"><label>Name <input type="text" name="other.ref1.name" placeholder="Name" required /></label></div>
+          <div class="inline-third"><label>Title <select name="other.ref1.MotherTitle" required><option value="">Select</option><option value="Mr">Mr</option><option value="Mrs">Mrs</option><option value="Dr">Dr</option><option value="Reb">Reb</option><option value="Rabbi">Rabbi</option><option value="Morah">Morah</option></select></label></div>
+          <div class="inline-third"><label>Phone<input type="tel" name="other.ref1.phone" placeholder="Phone" required /></label></div>
+         
+          <div class="inline-third"><label>Name <input type="text" name="other.ref2.name" placeholder="Name" required /></label></div>
+          <div class="inline-third"><label>Title <select name="other.ref1.MotherTitle" required><option value="">Select</option><option value="Mr">Mr</option><option value="Mrs">Mrs</option><option value="Dr">Dr</option><option value="Reb">Reb</option><option value="Rabbi">Rabbi</option><option value="Morah">Morah</option></select></label></div>
+          <div class="inline-third"><label> Phone <input type="tel" name="other.ref2.phone" placeholder="Phone" required /></label></div>
+          
+          
+        </div>
+
+        <div class="nav-buttons">
+          <button type="button" class="back-button">Back</button>
+          <button type="button" class="next-button">Next</button>
+        </div>
+      </div>
+
+      <div class="form-step" data-step="6">
+        <h2>Required Information</h2>
+
+        <div class="form-section">
+          <label>Have you ever been convicted of any crime (including child abuse)?
+            <select id="crime" name="other.crime" size="1" required>
+                <option></option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                </select></label>
+        </div>
+
+        
+        <div class="nav-buttons">
+          <button type="button" class="back-button">Back</button>
+        </div>
+        <button type="submit">Submit</button>
+      </div>
+      <p class="error" id="formError"></p>
+    </form>
+
+    <script>
+      document.getElementById("applicationForm").addEventListener("submit", function (e) {
+        const form = e.target;
+        const errorBox = document.getElementById("formError");
+        errorBox.textContent = ""; // clear previous errors
+        let focusSet = false;
+
+        const showError = (msg, field) => {
+          errorBox.textContent = msg;
+          if (!focusSet && field) {
+            field.focus();
+            focusSet = true;
+          }
+        };
+
+        const requiredFields = form.querySelectorAll("[required]");
+        for (let field of requiredFields) {
+          if (!field.value.trim()) {
+            e.preventDefault();
+            return showError("Please fill out all required fields.", field);
+          }
+        }
+
+        // Validate SSN (must be 9 digits or in format XXX-XX-XXXX)
+        const ssn = form["General_Information.ssn"].value.trim();
+        if (!/^\d{3}-\d{2}-\d{4}$/.test(ssn) && !/^\d{9}$/.test(ssn)) {
+          e.preventDefault();
+          return showError("Please enter a valid SSN (XXX-XX-XXXX or 9 digits).", form["General_Information.ssn"]);
+        }
+
+        // Validate phone numbers
+        const phoneFields = ["ContactInformation.homePhone", "ContactInformation.cellPhone", "yeshiva.rebbiPhone", "fatherCell", "motherCell"];
+        for (let name of phoneFields) {
+          const phone = form[name].value.replace(/\D/g, "");
+          if (!/^\d{10}$/.test(phone)) {
+            e.preventDefault();
+            return showError("Please enter a valid 10-digit phone number.", form[name]);
+          }
+        }
+
+        // Validate email (extra validation just in case)
+        const email = form["ContactInformation.email"].value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          e.preventDefault();
+          return showError("Please enter a valid email address.", form.email);
+        }
+
+        // Validate names (only letters and spaces)
+        const nameFields = ["General_Information.lastName", "General_Information.firstName", "family.fatherName", "family.motherName", "yeshiva.rebbi"];
+        for (let name of nameFields) {
+          if (!/^[a-zA-Z\s'-]+$/.test(form[name].value)) {
+            e.preventDefault();
+            return showError("Names may only contain letters, spaces, hyphens, and apostrophes.", form[name]);
+          }
+        }
+
+        // Validate Zip code
+        const zip = form.homeZip.value.trim();
+        if (!/^\d{5}(-\d{4})?$/.test(zip)) {
+          e.preventDefault();
+          return showError("Please enter a valid ZIP code (5 or 9 digits).", form.homeZip);
+        }
+
+        // Validate age
+        const age = parseInt(form.age.value);
+        if (isNaN(age) || age < 14 || age > 99) {
+          e.preventDefault();
+          return showError("Please enter a valid age (14–99).", form.age);
+        }
+
+        // Validate conviction radio buttons
+        if (!form.querySelector('input[name="convicted"]:checked')) {
+          e.preventDefault();
+          return showError("Please answer the crime conviction question.");
+        }
+
+        // All good
+        return true;
+      });
+
+      const formatSSN = (value) => {
+        return value
+          .replace(/\D/g, "")
+          .slice(0, 9)
+          .replace(/^(\d{3})(\d{0,2})(\d{0,4})$/, (_, p1, p2, p3) => {
+            return [p1, p2, p3].filter(Boolean).join("-");
+          });
+      };
+
+      const formatPhone = (value) => {
+        return value
+          .replace(/\D/g, "")
+          .slice(0, 10)
+          .replace(/^(\d{3})(\d{0,3})(\d{0,4})$/, (_, p1, p2, p3) => {
+            if (!p2) return `(${p1}`;
+            if (!p3) return `(${p1}) ${p2}`;
+            return `(${p1}) ${p2}-${p3}`;
+          });
+      };
+
+      const validateField = (field, valid, message) => {
+        const existingMsg = field.parentNode.querySelector(".error-msg");
+        if (!valid) {
+          field.classList.add("invalid");
+          if (!existingMsg) {
+            const span = document.createElement("span");
+            span.className = "error-msg";
+            span.textContent = message;
+            field.parentNode.appendChild(span);
+          } else {
+            existingMsg.textContent = message;
+          }
+        } else {
+          field.classList.remove("invalid");
+          if (existingMsg) existingMsg.remove();
+        }
+      };
+      
+      
+      ////////////////////////////
+      //in line validate
+      ///////////////////////////
+      const form = document.getElementById("applicationForm");
+
+      // Auto-format + validate SSN
+      form["General_Information.ssn"].addEventListener("input", (e) => {
+        e.target.value = formatSSN(e.target.value);
+        const valid = /^\d{3}-\d{2}-\d{4}$/.test(e.target.value);
+        validateField(e.target, valid, "SSN must be in XXX-XX-XXXX format");
+      });
+
+      // Phone Fields
+      const phoneNames = [
+        "ContactInformation.homePhone",
+        "ContactInformation.cellPhone",
+        "yeshiva.rebbiPhone",
+        "family.fatherCell",
+        "family.motherCell",
+        "yeshiva.rebbiPhone"
+      ];
+      phoneNames.forEach((name) => {
+        const field = form[name];
+        field.addEventListener("input", (e) => {
+          e.target.value = formatPhone(e.target.value);
+          const valid = /^\(\d{3}\) \d{3}-\d{4}$/.test(e.target.value);
+          validateField(e.target, valid, "Phone must be in (XXX) XXX-XXXX format");
+        });
+      });
+
+      // Email live validation
+      form["ContactInformation.email"].addEventListener("input", (e) => {
+        const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.target.value);
+        validateField(e.target, valid, "Enter a valid email address");
+      });
+
+      // Zip code validation
+      form["Address.homeZip"].addEventListener("input", (e) => {
+        const value = e.target.value.replace(/[^\d\-]/g, "").slice(0, 10);
+        e.target.value = value;
+        const valid = /^\d{5}(-\d{4})?$/.test(value);
+        validateField(e.target, valid, "ZIP must be 5 digits or ZIP+4");
+      });
+
+      // Name validation (letters, spaces, hyphens, apostrophes)
+      const nameFields = ["General_Information.firstName", "General_Information.lastName", "yeshiva.rebbi", "family.fatherName", "family.motherName"];
+      nameFields.forEach((name) => {
+        const field = form[name];
+        field.addEventListener("input", (e) => {
+          const valid = /^[a-zA-Z\s'-]*$/.test(e.target.value);
+          validateField(e.target, valid, "Only letters, spaces, apostrophes, and hyphens allowed");
+        });
+      });
+
+      // Age check
+      form["General_Information.age"].addEventListener("input", (e) => {
+        const age = parseInt(e.target.value);
+        const valid = age >= 14 && age <= 99;
+        validateField(e.target, valid, "Age must be between 14–99");
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        let currentStep = 1;
+        const steps = document.querySelectorAll(".form-step");
+        const totalSteps = steps.length;
+        const form = document.getElementById("applicationForm");
+
+        function showStep(step) {
+          steps.forEach((stepDiv) => {
+            stepDiv.classList.remove("active");
+          });
+          const nextStep = document.querySelector(`.form-step[data-step="${step}"]`);
+          if (nextStep) {
+            nextStep.classList.add("active");
+          }
+        }
+        showStep(currentStep);
+
+        // Validate current step
+        function validateStep(step) {
+          const stepDiv = document.querySelector(`.form-step[data-step="${step}"]`);
+          const requiredFields = stepDiv.querySelectorAll("[required]");
+          let allValid = true;
+
+          for (let field of requiredFields) {
+            const value = field.value.trim();
+            if (!value) {
+              field.classList.add("invalid");
+              allValid = false;
+            } else {
+              field.classList.remove("invalid");
+            }
+          }
+
+          if (!allValid) {
+            const errorBox = document.getElementById("formError");
+            errorBox.textContent = "Please fill out all required fields in this section.";
+          }
+
+          return allValid;
+        }
+
+        // Button handlers
+        form.addEventListener("click", function (e) {
+          if (e.target.classList.contains("next-button")) {
+            e.preventDefault();
+            if (validateStep(currentStep)) {
+              currentStep++;
+              showStep(currentStep);
+              document.getElementById("formError").textContent = "";
+            }
+          }
+
+          if (e.target.classList.contains("back-button")) {
+            e.preventDefault();
+            currentStep--;
+            showStep(currentStep);
+            document.getElementById("formError").textContent = "";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
