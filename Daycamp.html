@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Camp Application Form</title>
+    <link rel="icon" type="image/x-icon" href="/TCTcLOGO.png">
+    <link rel="stylesheet" href="SharedStyle.css">
+</head>
+<body>
+
+
+        <h1><img src="/TCTcLOGO.png" alt="TCTLOGO"> Camp Application Form <img src="/TCTcLOGO.png" alt="TCTLOGO"></h1>
+    <form id="applicationForm" method="POST" action="https://47dmj2aevf.execute-api.us-east-1.amazonaws.com/submit" >
+                    <input type="hidden" id="application_Type" name="application_Type" value="daycamp">
+
+            <div class="form-section">
+                <h2>Family Information</h2>
+                <div class="inline-third"><label>Last Name <input type="text" name="GeneralInformation_LastName" required /></label></div>
+                <div class="inline-third"><label>Number of Children <input type="number" name="FamilyInformation_NumberOfchildren" required /></label></div>
+                <div class="inline-third"><label>Parents Marital Status<select id="maritalStatus" name="FamilyInformation_maritalStatus" size="1" required><option></option><option value="Married">Married</option><option value="Divorced">Divorced</option><option value="Widowed">Widowed</option></select></label></div>
+                <div class="inline-third"><label>Family Shul <input type="text" name="FamilyInformation_Shul" required /></label></div>
+                <div class="inline-third"><label>Home Phone <input type="tel"  pattern="[0-9]{10}" name="ContactInformation_Phone_HomePhone" required /></label></div>
+                <div class="inline-third"><label>Email  <input type="email" name="ContactInformation_email" required /></label></div>
+
+                <div class="inline"></div><div class="inline"></div>
+                <div class="inline-third"><label>Father's Title <select name="FamilyInformation_FatherTitle" required><option value="">Select</option><option value="Rabbi">Rabbi</option><option value="Mr">Mr</option><option value="Dr">Dr</option></select></label></div>
+                <div class="inline-third"><label>Father's  Name <input type="text" name="FamilyInformation_FatherName" required /></label></div>
+                <div class="inline-third"><label>Father Cell <input type="tel" pattern="[0-9]{10}"  name="ContactInformation_Phone_FatherCell" required /></label></div>
+
+                <div class="inline"></div><div class="inline"></div>
+                <div class="inline-third"><label>Mother's Title <select name="FamilyInformation_MotherTitle" required><option value="">Select</option><option value="Mrs">Mrs</option><option value="Dr">Dr</option><option value="Reb">Reb</option></select></label></div>
+                <div class="inline-third"><label>Mother's Name <input type="text" name="FamilyInformation_MotherName" required /></label></div>
+                <div class="inline-third"><label>Mother Cell <input type="tel" name="ContactInformation_Phone_MotherCell" required /></label></div>
+
+                
+            </div>
+                    <div class="form-section"> 
+
+                <h2>Home Address</h2>
+                <div class="inline"><label>Address <input type="text" name="ContactInformation_Address_Home_Address" required /></label></div>
+                <div class="inline-third"><label>City <input type="text" name="ContactInformation_Address_home_City" required /></label></div>
+                <div class="inline-third"><label>State <select id="homeState" name="Address_homeState" size="1" required>
+                <option></option>
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Arkansas">Arkansas</option>
+                <option value="California">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Connecticut">Connecticut</option>
+                <option value="Delaware">Delaware</option>
+                <option value="Florida">Florida</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Hawaii">Hawaii</option>
+                <option value="Idaho">Idaho</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Indiana">Indiana</option>
+                <option value="Iowa">Iowa</option>
+                <option value="Kansas">Kansas</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="Louisiana">Louisiana</option>
+                <option value="Maine">Maine</option>
+                <option value="Maryland">Maryland</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Minnesota">Minnesota</option>
+                <option value="Mississippi">Mississippi</option>
+                <option value="Missouri">Missouri</option>
+                <option value="Montana">Montana</option>
+                <option value="Nebraska">Nebraska</option>
+                <option value="Nevada">Nevada</option>
+                <option value="New Hampshire">New Hampshire</option>
+                <option value="New Jersey">New Jersey</option>
+                <option value="New Mexico">New Mexico</option>
+                <option value="New York">New York</option>
+                <option value="North Carolina">North Carolina</option>
+                <option value="North Dakota">North Dakota</option>
+                <option value="Ohio">Ohio</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="Rhode Island">Rhode Island</option>
+                <option value="South Carolina">South Carolina</option>
+                <option value="South Dakota">South Dakota</option>
+                <option value="Tennessee">Tennessee</option>
+                <option value="Texas">Texas</option>
+                <option value="Utah">Utah</option>
+                <option value="Vermont">Vermont</option>
+                <option value="Virginia">Virginia</option>
+                <option value="Washington">Washington</option>
+                <option value="West Virginia">West Virginia</option>
+                <option value="Wisconsin">Wisconsin</option>
+                <option value="Wyoming">Wyoming</option></select>
+              <br/>
+            </label></div>
+                <div class="inline-third"><label>ZIP Code <input type="text" name="ContactInformation_Address_home_Zip" pattern="[0-9]{5}" Title="ZIP code must be 5 digits" required /></label></div>
+            </div>
+
+            <div class="form-section">
+                
+                <h2>Summer Address</h2>                
+                <div class="inline"><label>Address <input type="text" name="ContactInformation_Address_Summer_Address" /></label></div>
+                <div class="inline-third"><label>City <input type="text" name="ContactInformation_Address_Summer_City"  /></label></div>
+                <div class="inline-third"><label>State <select id="SummerState" name="ContactInformation_Address_Summer_State" size="1" >
+                <option></option>
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Arkansas">Arkansas</option>
+                <option value="California">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Connecticut">Connecticut</option>
+                <option value="Delaware">Delaware</option>
+                <option value="Florida">Florida</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Hawaii">Hawaii</option>
+                <option value="Idaho">Idaho</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Indiana">Indiana</option>
+                <option value="Iowa">Iowa</option>
+                <option value="Kansas">Kansas</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="Louisiana">Louisiana</option>
+                <option value="Maine">Maine</option>
+                <option value="Maryland">Maryland</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Minnesota">Minnesota</option>
+                <option value="Mississippi">Mississippi</option>
+                <option value="Missouri">Missouri</option>
+                <option value="Montana">Montana</option>
+                <option value="Nebraska">Nebraska</option>
+                <option value="Nevada">Nevada</option>
+                <option value="New Hampshire">New Hampshire</option>
+                <option value="New Jersey">New Jersey</option>
+                <option value="New Mexico">New Mexico</option>
+                <option value="New York">New York</option>
+                <option value="North Carolina">North Carolina</option>
+                <option value="North Dakota">North Dakota</option>
+                <option value="Ohio">Ohio</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="Rhode Island">Rhode Island</option>
+                <option value="South Carolina">South Carolina</option>
+                <option value="South Dakota">South Dakota</option>
+                <option value="Tennessee">Tennessee</option>
+                <option value="Texas">Texas</option>
+                <option value="Utah">Utah</option>
+                <option value="Vermont">Vermont</option>
+                <option value="Virginia">Virginia</option>
+                <option value="Washington">Washington</option>
+                <option value="West Virginia">West Virginia</option>
+                <option value="Wisconsin">Wisconsin</option>
+                <option value="Wyoming">Wyoming</option></select>
+              <br/>
+            </label></div>
+                <div class="inline-third"><label>ZIP Code <input type="number" pattern="[0-9]{5}" name="ContactInformation_Address_Summer_Zip"  /></label></div>
+                <div class="inline"><label>Summer Phone <input type="tel" pattern="[0-9]{10}" name="ContactInformation_Phone_Summer" /></label></div>
+             
+            </div>
+            <div class="form-section">
+                <h2>Emergency Contact</h2>
+                <div class="inline-third"><label>Name<input type="text" name="ContactInformation_emergencyContact_Name" required /></label></div>
+                <div class="inline-third"><label>Phone Number <input type="tel" pattern="[0-9]{10}" name="ContactInformation_emergencyContact_phone" required /></label></div>
+                <div class="inline-third"><label>Relationship<input type="text"  name="ContactInformation_emergencyContact_Relationship" required /></label></div>
+
+            </div>
+        
+        
+         <h2>Camper Information</h2>
+            
+            <div class="form-section">
+                
+                <div class="inline"><label>Applying For:<select name="GeneralInformation_Half" required><option value="">Select</option>
+                    <option value="1st Trip">1st Trip</option>
+                    <option value="2nd Trip">2nd Trip</option>
+                    <option value="Full Summer">Full Summer</option></select></label></div>
+                
+                
+                <div class="inline-third"><label>Camper's First Name <input type="text" name="GeneralInformation_FirstName" placeholder="Name he would like to be called" required /></label></div>
+                <div class="inline-third"><label>Date of Birth <input type="date" name="GeneralInformation_Birthday" required /></label></div>
+                <div class="inline-third"><label>Age <input type="number" name="GeneralInformation_Age" min="4" max="18" required /></label></div>
+            </div>
+            
+            <div class="form-section">
+                
+                
+                <div class="inline-third"><label>Yeshiva Grade (2024-2025) <input type="text" name="YeshivaInformation_Grade" required /></label></div>
+                <div class="inline-third"><label>Rebbe's Name <input type="text" name="YeshivaInformation_Rebbe" required /></label></div>
+                <div class="inline-third"><label>Rebbe's Phone<input type="tel" pattern="[0-9]{10}" name="YeshivaInformation_RebbePhone" required /></label></div>
+                
+                <div class="inline"><label>Camper's Learning Level
+                <select name="YeshivaInformation_LearningLevel" required><option value="">Select</option>
+                <option value="גמ' מפרשים">גמ' מפרשים</option>
+                <option value="גמ' תוס'">גמ' תוס'</option>
+                <option value=" גמ' רש''י"> גמ' רש"י</option>
+                <option value="התחלת גמרא">התחלת גמרא</option>
+                <option value="משניות">משניות</option>
+                <option value="התחלת משניות">התחלת משניות</option>
+                <option value="חומש רש''י">חומש רש''י</option>
+                    <option value="חומש">חומש</option></select></label></div>
+                <div class="inline"><label>Private Tutoring Requested (Subjects) <textarea type="text" name="YeshivaInformation_Tutoring" ></textarea></label></div>
+</div>
+            <div class="form-section">
+                <div class="inline"><label>Child Spent Last Summer At<input type="text"  name="GeneralInformation_LastSummer"></label></div>
+                <div class="inline"><label>Special Instructions (Medical/Allergies)<textarea  name="GeneralInformation_SpecialInstructions"></textarea></label></div>
+                <div class="inline"><label >If applying for one half only: Where will he be for the other half?<input type="text"  name="GeneralInformation_OtherHalf"></label></div>
+        </div>
+    </form>
+    </body>
+</html>
