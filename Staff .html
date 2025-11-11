@@ -20,31 +20,31 @@
         <h2>General Information</h2>
         
         <div class="form-section">
-          <div class="inline"><label>What Half of the Summer are you Applying for?<select id="half" name="General_Information.half" size="1" required>
+          <div class="inline"><label>What Half of the Summer are you Applying for?<select id="half" name="GeneralInformation_Half" size="1" required>
                 <option></option>
                 <option value="First Half">First Half</option>
                 <option value="Second Half">Second Half</option>
           <option value="Full Summer">Full Summer</option></select></label></div>
           
-          <div class="inline"><label> Job Are You Applying For <input type="text" name="General_Information.job" required /></label></div>
-          <div class="inline-third"><label>Date of Birth <input type="date" name="General_Information.dob" required /></label></div>
-          <div class="inline-third"><label>Age <input type="number" name="General_Information.age" required min="0" /></label></div>
+          <div class="inline"><label> Job Are You Applying For <input type="text" name="GeneralInformation_Job" required /></label></div>
+          <div class="inline-third"><label>Date of Birth <input type="date" name="GeneralInformation_Birthday" required /></label></div>
+          <div class="inline-third"><label>Age <input type="number" name="GeneralInformation_Age" required /></label></div>
         
         </div>
 
         <div class="form-section">
           
           
-          <div class="inline-half"><label>First Name<input type="text" name="General_Information.firstName" placeholder="First" required /></label></div>
-            <div class="inline-half"><label>Last Name<input type="text" name="General_Information.lastName" placeholder="Last" required /></label></div>
-          <div class="inline"><label>Social Security # <input type="text" name="General_Information.ssn" required /></label></div>
+          <div class="inline-half"><label>First Name<input type="text" name="GeneralInformation_FirstName" placeholder="First" required /></label></div>
+            <div class="inline-half"><label>Last Name<input type="text" name="GeneralInformation_LastName" placeholder="Last" required /></label></div>
+          <div class="inline"><label>Social Security # <input type="text" name="GeneralInformation_SSN" required /></label></div>
         
         </div>
 
         <div class="form-section">
-          <div class="inline"><label>Home Phone <input type="tel" name="ContactInformation.homePhone" required /></label></div>
-          <div class="inline"><label>Cell Phone <input type="tel" name="ContactInformation.cellPhone" required /></label></div>
-          <div class="inline"><label>Email <input type="email" name="ContactInformation.email" required /></label></div>
+          <div class="inline"><label>Home Phone <input type="tel" name="ContactInformation_Phone_HomePhone" required /></label></div>
+          <div class="inline"><label>Cell Phone <input type="tel" name="ContactInformation_Phone_CellPhone" required /></label></div>
+          <div class="inline"><label>Email <input type="email" name="ContactInformation_email" required /></label></div>
         </div>
         <div class="nav-buttons">
           <button type="button" class="next-button">Next</button>
@@ -52,9 +52,9 @@
       </div>
       <div class="form-step" data-step="2">
         <div class="form-section">
-          <div class="inline"><label>Home Address <input type="text" name="Address.homeAddress" required /></label></div>
-          <div class="inline-third"><label>City <input type="text" name="Address.homeCity" required /></label></div>
-          <div class="inline-third"><label>State<select id="homeState" name="Address.homeState" size="1" required>
+          <div class="inline"><label>Home Address <input type="text" name="ContactInformation_Address_Home_Address" required /></label></div>
+          <div class="inline-third"><label>City <input type="text" name="ContactInformation_Address_Home_City" required /></label></div>
+          <div class="inline-third"><label>State<select id="homeState" name="ContactInformation_Address_Home_State" size="1" required>
                 <option></option>
                 <option value="Alabama">Alabama</option>
                 <option value="Alaska">Alaska</option>
@@ -109,14 +109,14 @@
               <br/>
             </label>
           </div>
-          <div class="inline-third"><label>Zip <input type="text" name="Address.homeZip" required /></label></div>
+          <div class="inline-third"><label>Zip <input type="text" name="ContactInformation_Address_Home_Zip" required /></label></div>
         </div>
         
         <div class="form-section">
-          <div class="inline"><label>Mailing Address (if different) <input type="text" name="mailAddress" /></label></div>
-          <div class="inline-third"><label>City <input type="text" name="Address.mailCity" /></label></div>
-          <div class="inline-third"><label>State <input type="text" name="Address.mailState" /></label></div>
-            <div class="inline-third"><label>Zip <input type="text" name="Address.mailZip"  /></label></div>
+          <div class="inline"><label>Mailing Address (if different) <input type="text" name="ContactInformation_Address_Mail_Address" /></label></div>
+          <div class="inline-third"><label>City <input type="text" name="ContactInformation_Address_Mail_City" /></label></div>
+          <div class="inline-third"><label>State <input type="text" name="ContactInformation_Address_Mail_State" /></label></div>
+            <div class="inline-third"><label>Zip <input type="text" name="ContactInformation_Address_Mail_Zip"  /></label></div>
        
             </div>
 
@@ -131,13 +131,13 @@
 
         <div class="form-section">
           
-          <div class="inline"><label>Yeshiva Attending <input type="text" name="yeshiva.yeshiva" required /></label></div>
-          <div class="inline-third"><label>Hebrew Grade <input type="text" name="yeshiva.hebrewGrade" required /></label></div>
-          <div class="inline-third"><label>English Grade <input type="text" name="yeshiva.englishGrade" required /></label></div>
-          <div class="inline-third"><label>Years in this Yeshiva <input type="number" name="yeshiva.yearsYeshiva" required /></label></div>
-          <div class="inline"><label>Rebbi's Name <input type="text" name="yeshiva.rebbi" required /></label></div>
-          <div class="inline"><label>Rebbi's Phone # <input type="tel" name="yeshiva.rebbiPhone" required /></label></div>
-          <div class="inline"><label>Previous Yeshivas (if less than 2 years) <textarea name="yeshiva.prevYeshivas"></textarea></label></div>
+          <div class="inline"><label>Yeshiva Attending <input type="text" name="YeshivaInformation_Yeshiva" required /></label></div>
+          <div class="inline-third"><label>Hebrew Grade <input type="text" name="YeshivaInformation_HebrewGrade" required /></label></div>
+          <div class="inline-third"><label>English Grade <input type="text" name="YeshivaInformation_EnglishGrade" required /></label></div>
+          <div class="inline-third"><label>Years in this Yeshiva <input type="number" name="YeshivaInformation_YearsInYeshiva" required /></label></div>
+          <div class="inline"><label>Rebbi's Name <input type="text" name="YeshivaInformation_Rebbe" required /></label></div>
+          <div class="inline"><label>Rebbi's Phone # <input type="tel" name="YeshivaInformation_RebbePhone" required /></label></div>
+          <div class="inline"><label>Previous Yeshivas (if less than 2 years) <textarea name="YeshivaInformation_PreviousYeshivas"></textarea></label></div>
        
         </div>
 
@@ -149,22 +149,22 @@
       <div class="form-step" data-step="4">
         <h2>Family Information</h2>
         <div class="form-section">
-          <div class="inline-third"><label>Father's Name <input type="text" name="family.fatherName" required /></label></div>
-          <div class="inline-third"><label>Occupation <input type="text" name="family.fatherOccupation" required /></label></div>
-          <div class="inline-third"><label> Cell <input type="tel" name="family.fatherCell" required /></label></div>
+          <div class="inline-third"><label>Father's Name <input type="text" name="FamilyInformation_FatherName" required /></label></div>
+          <div class="inline-third"><label>Occupation <input type="text" name="FamilyInformation_Occupation_Father_Occupation" required /></label></div>
+          <div class="inline-third"><label> Cell <input type="tel" name="ContactInformation_Phone_FatherCell" required /></label></div>
 
-          <div class="inline-third"><label>Mother’s Name <input type="text" name="family.motherName" required /></label></div>
-          <div class="inline-third"><label>Occupation <input type="text" name="family.motherOccupation" required /></label></div>
-          <div class="inline-third"><label>Mother’s Cell <input type="tel" name="family.motherCell" required /></label></div>
+          <div class="inline-third"><label>Mother’s Name <input type="text" name="FamilyInformation_MotherName" required /></label></div>
+          <div class="inline-third"><label>Occupation <input type="text" name="FamilyInformation_Occupation_Mother_Occupation" required /></label></div>
+          <div class="inline-third"><label>Mother’s Cell <input type="tel" name="ContactInformation_Phone_MotherCell" required /></label></div>
 
-          <div class="inline"><label>Parents Marital Status<select id="maritalStatus" name="family.maritalStatus" size="1" required>
+          <div class="inline"><label>Parents Marital Status<select id="maritalStatus" name="FamilyInformation_maritalStatus" size="1" required>
                 <option></option>
                 <option value="Married">Married</option>
                 <option value="Divorced">Divorced</option>
                 <option value="Widowed">Widowed</option>
             </select></label></div>
           
-          <div class="inline"><label>Shul Name <input type="text" name="family.shul" required /></label></div>
+          <div class="inline"><label>Shul Name <input type="text" name="FamilyInformation_Shul" required /></label></div>
         </div>
 
         <div class="nav-buttons">
@@ -176,30 +176,30 @@
         <h2>Prevous Experience</h2>
         <div class="form-section">
           <h3>Experience</h3>
-          <div class="inline-third"><label>Camp #1 <input type="text" name="xp.camp1.name" placeholder="Name" /></label></div>
-          <div class="inline-third"><label># of Years Attended<input type="number" name="xp.camp1.years" placeholder="Attended in years " /></label></div>
-            <div class="inline-third"><label>Position <input type="text" name="xp.camp1.position" placeholder="Position" /></label></div>
-          <div class="inline-third"><label>Camp #2 <input type="text" name="xp.camp3.name" placeholder="Name" /></label></div>
-          <div class="inline-third"><label># of Years Attended <input type="number" name="xp.camp2.years" placeholder="Attended in years" /></label></div>
-          <div class="inline-third"><label> Position<input type="text" name="xp.camp5.position" placeholder="Position" /></label></div>
-          <div class="inline-third"><label>Camp #3 <input type="text" name="xp.camp3.name" placeholder="Name" /></label></div>
-          <div class="inline-third"><label># of Years Attended <input type="number" name="xp.camp3.years" placeholder="Attended in years" /></label></div>
-          <div class="inline-third"><label> Position<input type="text" name="xp.camp3.position" placeholder="Position" /></label></div>
+          <div class="inline-third"><label>Camp #1 <input type="text" name="Experience_Camp_1_Name" placeholder="Name" /></label></div>
+          <div class="inline-third"><label># of Years Attended<input type="number" name="Experience_Camp_1_Years" placeholder="Attended in years " /></label></div>
+            <div class="inline-third"><label>Position <input type="text" name="Experience_Camp_1_Position" placeholder="Position" /></label></div>
+          <div class="inline-third"><label>Camp #2 <input type="text" name="Experience_Camp_2_Name" placeholder="Name" /></label></div>
+          <div class="inline-third"><label># of Years Attended <input type="number" name="Experience_Camp_2_Years" placeholder="Attended in years" /></label></div>
+          <div class="inline-third"><label> Position<input type="text" name="Experience_Camp_2_Position" placeholder="Position" /></label></div>
+          <div class="inline-third"><label>Camp #3 <input type="text" name="Experience_Camp_3_Name" placeholder="Name" /></label></div>
+          <div class="inline-third"><label># of Years Attended <input type="number" name="Experience_Camp_3_Years" placeholder="Attended in years" /></label></div>
+          <div class="inline-third"><label> Position<input type="text" name="Experience_Camp_3_Position" placeholder="Position" /></label></div>
 
-          <div class="inline"><label>Other Experience <textarea name="xp.otherExp"></textarea></label></div>
+          <div class="inline"><label>Other Experience <textarea name="Experience_Other_Experience"></textarea></label></div>
 
-          <div class="inline"><label>Skills, Talents, and Competency Level <textarea name="xp.skills" required></textarea></label></div></div>
+          <div class="inline"><label>Skills, Talents, and Competency Level <textarea name="Experience_Other_Skills" required></textarea></label></div></div>
         
         <div class="form-section">
           <h3>References</h3>
             
-          <div class="inline-third"><label>Name <input type="text" name="other.ref1.name" placeholder="Name" required /></label></div>
-          <div class="inline-third"><label>Title <select name="other.ref1.MotherTitle" required><option value="">Select</option><option value="Mr">Mr</option><option value="Mrs">Mrs</option><option value="Dr">Dr</option><option value="Reb">Reb</option><option value="Rabbi">Rabbi</option><option value="Morah">Morah</option></select></label></div>
-          <div class="inline-third"><label>Phone<input type="tel" name="other.ref1.phone" placeholder="Phone" required /></label></div>
+          <div class="inline-third"><label>Name <input type="text" name="References_1_Name" placeholder="Name" required /></label></div>
+          <div class="inline-third"><label>Title <select name="References_1_Title" required><option value="">Select</option><option value="Mr">Mr</option><option value="Mrs">Mrs</option><option value="Dr">Dr</option><option value="Reb">Reb</option><option value="Rabbi">Rabbi</option><option value="Morah">Morah</option></select></label></div>
+          <div class="inline-third"><label>Phone<input type="tel" name="References_1_Phone" placeholder="Phone" required /></label></div>
          
-          <div class="inline-third"><label>Name <input type="text" name="other.ref2.name" placeholder="Name" required /></label></div>
-          <div class="inline-third"><label>Title <select name="other.ref1.MotherTitle" required><option value="">Select</option><option value="Mr">Mr</option><option value="Mrs">Mrs</option><option value="Dr">Dr</option><option value="Reb">Reb</option><option value="Rabbi">Rabbi</option><option value="Morah">Morah</option></select></label></div>
-          <div class="inline-third"><label> Phone <input type="tel" name="other.ref2.phone" placeholder="Phone" required /></label></div>
+          <div class="inline-third"><label>Name <input type="text" name="References_2_Name" placeholder="Name" required /></label></div>
+          <div class="inline-third"><label>Title <select name="References_2_Title" required><option value="">Select</option><option value="Mr">Mr</option><option value="Mrs">Mrs</option><option value="Dr">Dr</option><option value="Reb">Reb</option><option value="Rabbi">Rabbi</option><option value="Morah">Morah</option></select></label></div>
+          <div class="inline-third"><label> Phone <input type="tel" name="References_2_Phone" placeholder="Phone" required /></label></div>
           
           
         </div>
@@ -215,7 +215,7 @@
 
         <div class="form-section">
           <label>Have you ever been convicted of any crime (including child abuse)?
-            <select id="crime" name="other.crime" size="1" required>
+            <select id="crime" name="Other_Crime" size="1" required>
                 <option></option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Camp Application Form</title>
+    <title>Daycamp Application Form</title>
     <link rel="icon" type="image/x-icon" href="/TCTcLOGO.png">
     <link rel="stylesheet" href="SharedStyle.css">
 </head>
@@ -168,7 +168,7 @@
             </div>
         
         
-         <h2>Camper Information</h2>
+         <h2>Step 2: Camper Information</h2>
             
             <div class="form-section">
                 
@@ -207,6 +207,213 @@
                 <div class="inline"><label>Special Instructions (Medical/Allergies)<textarea  name="GeneralInformation_SpecialInstructions"></textarea></label></div>
                 <div class="inline"><label >If applying for one half only: Where will he be for the other half?<input type="text"  name="GeneralInformation_OtherHalf"></label></div>
         </div>
+        
+        <div class="form-section ">
+            <h2>Step 3: PLEASE READ AND SIGN:</h2>
+    
+    <h3>CONDITIONS OF ENROLLMENT</h3>
+    <p>I wish to enroll my son(s) and we agree to abide by all camp rules and regulations as well as the following conditions:</p>
+
+    <h4>FEES AND PAYMENTS</h4>
+
+    <ul>
+        <li>Applications received on or before May 15 must be accompanied by a minimum deposit of $750.00 per camper. (NO postdated checks for the deposit.) Payment must be completed by May 15.</li>
+        <li>Applications received after May 15 must be accompanied by full payment.</li>
+        <li>Applications without the full deposit will not be processed.</li>
+        <li>A $25 fee will apply for bounced checks.</li>
+        <li>For credit card payment, see below.</li>
+        <li>Parents will be held responsible for any and all medical bills.</li>
+        <li>Day camp tuition does not include trips.</li>
+    </ul>
+
+    <h4>REFUND POLICY</h4>
+
+    <ul>
+        <li>Deposit will be returned for cancellations before March 31 with the exception of $100.00 per child – Application Fee.</li>
+        <li>Cancellation between April 1 and April 14 will result in the loss of $500.00 of each deposit.</li>
+        <li>Cancellation after April 15 will result in the lost of the entire $750.00 deposit. Cancellation after May 1, or June 1st for 2nd half day campers, will result in the loss of the entire fee.</li>
+        <li>Any camper asked to leave camp during the summer will incur a minimum charge of $350.00 plus a pro-rated weekly fee for the time spent in camp. Partial weeks will be charged for full week. Late arrivals, early departures, absences, or failure to cancel will not result in a refund or credit. Dismissal from camp due to intolerable behavior (i.e. smoking, vaping, פה ניבול, damage to camp property, etc.) will mean the forfeit of the entire camp fee.</li>
+        <li>Camp Toras Chaim Tashbar confirms applications and agrees to transport to and from our campus based on the number of children accepted from each bungalow colony and the proximity of the bungalow colony to our transportation route. Should this number change, camp reserves the right to cancel transportation and refund the unused portion of camp tuition.</li>
+    </ul>
+
+    <h4>TRIP AUTHORIZATION / HOLD HARMLESS AGREEMENT:</h4>
+    
+    <p>
+    I have read the Conditions of Enrollment including the Fees and Payments and Refund Policy. I agree to abide by these policies. I hereby authorize Camp Toras Chaim Tashbar (hereinafter Camp) to take my child(ren) off Camp grounds to go on trips organized as part of the camping program. This may include swimming and/or boating sites. In addition, my child(ren) may participate in any on or off ground activity organized by Camp, including but not limited to land sports, aquatics activities, indoor activities, bicycling, hiking, cookouts, etc., and I assume the inherent risk of such activities and camp programs. I will hold Camp harmless in the event of injury or property damage or loss as a result of such activities. I also agree to abide by all rules and regulations as set forth in the camp application, in the information packet and by the camp administration.
+    </p>
+
+        <div class="inline"><label>Parent’s Signature (Type full name to sign electronically)<input type="text" id="parent_signature" name="parent_signature" required></label></div>
+        <div class="inline-half"> <label>Date<input type="date" id="signature_date" name="signature_date" required></label></div>
+</div>
+        
+        
+        <h2>Step 4: Fees and Payment </h2>
+                        
+            <div class="form-section">
+                <h2>Camp Fees</h2>
+                <div class="inline"><table class="fees-table">
+                    <thead><tr><th>Program</th><th>Cost </th></tr></thead>
+                    <tbody>
+                        <tr><td>Full Summer (8 weeks)</td><td>$2,500.00</td></tr>
+                        <tr><td>1st Trip (4 weeks)</td><td>$1,300.00</td></tr>
+                        <tr><td>2nd Trip (4 weeks)</td><td>$1,300.00</td></tr>
+                    </tbody>
+                    </table></div>
+                <p>* All checks must be paid with American dollars and must be drawn from an American bank.</p>
+                <p>** Transportation is an extra $250 per half if available in your area.
+</p>
+
+            </div>
+
+            <div class="form-section">
+                <h2>Credit Card Information (Optional)</h2>
+                <p>A processing fee of $25 per half - $50 for whole summer will be added if paying by credit card.<br>A 2% fee applies for partial payments or credits to your credit card.</p>
+                
+                <div class="inline-third"><label>Card Type <select name="CreditCard_Type" ><option value="">Select</option><option value="VISA">VISA</option><option value="MASTERCARD">MASTERCARD</option></select></label></div>
+                <div class="inline"></div>
+                <div class="inline-half"><label>Credit Card Number <input type="text" name="CreditCard_Number" placeholder="XXXX XXXX XXXX XXXX" /></label></div>
+                    <div class="inline-half"><label>Name on Card <input type="text" name="CreditCard_Name" /></label></div>
+                <div class="inline-half"><label>Expiration Date (MM/YY) <input type="text" name="CreditCard_Expiration" placeholder="MM/YY" /></label></div>
+                <div class="inline-half"><label>Security Code (CVV) <input type="text" name="CreditCard_CVV" /></label></div>
+                <label>Billing Address <input type="text" name="CreditCard_BillingAddress" /></label>
+                <label>ZIP Code <input type="text" pattern="[0-9]{5}" name="CreditCard_BillingZip" /></label>
+            </div>
+        
+        <button type="submit">Submit Application</button>
+        <p class="error" id="formError"></p>
     </form>
+    
+    
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    let currentStep = 1;
+    const steps = document.querySelectorAll(".form-step");
+    const form = document.getElementById("applicationForm");
+    const errorBox = document.getElementById("formError");
+
+    // --- Live formatting for phone numbers ---
+    const phoneFields = document.querySelectorAll('input[type="tel"]');
+    phoneFields.forEach(input => {
+        input.addEventListener('input', function(e) {
+             const raw = input.value.replace(/\D/g, '').slice(0, 10); // keep only digits
+            let formatted = '';
+
+            if (raw.length > 6) {
+                formatted = `(${raw.slice(0,3)})-${raw.slice(3,6)}-${raw.slice(6)}`;
+            } else if (raw.length > 3) {
+                formatted = `(${raw.slice(0,3)})-${raw.slice(3)}`;
+            } else if (raw.length > 0) {
+                formatted = `(${raw}`;
+            }
+
+            input.value = formatted;
+           
+        });
+    });
+
+    // --- Live formatting & validation for ZIP codes ---
+    const zipInputs = document.querySelectorAll('input[name$="_Zip"]');
+    zipInputs.forEach(input => {
+        input.addEventListener('input', () => {
+            input.value = input.value.replace(/\D/g, ''); // digits only
+            if (input.value.length > 5) input.value = input.value.slice(0,5);
+
+            // Add live invalid class if not exactly 5 digits
+            if (input.value.length !== 5) {
+                input.classList.add("invalid");
+                errorBox.textContent = "Please enter a valid 5-digit ZIP code.";
+            } else {
+                input.classList.remove("invalid");
+                errorBox.textContent = "";
+            }
+        });
+    });
+
+    // --- Form step logic ---
+    function showStep(step) {
+        steps.forEach((stepDiv) => stepDiv.classList.remove("active"));
+        const nextStep = document.querySelector(`.form-step[data-step="${step}"]`);
+        if (nextStep) {
+            nextStep.classList.add("active");
+            window.scrollTo(0, 0);
+        }
+    }
+
+    function validateStep(step) {
+        const stepDiv = document.querySelector(`.form-step[data-step="${step}"]`);
+        const requiredFields = stepDiv.querySelectorAll("[required]");
+        let allValid = true;
+        errorBox.textContent = "";
+
+        requiredFields.forEach(field => field.classList.remove("invalid"));
+
+        for (let field of requiredFields) {
+            if (field.type === 'radio' || field.type === 'checkbox') {
+                const name = field.name;
+                const group = stepDiv.querySelector(`input[name="${name}"]:checked`);
+                if (!group) {
+                    allValid = false;
+                    break;
+                }
+            } else if (field.name.endsWith("_Zip")) {
+                // ZIP validation: must be exactly 5 digits
+                if (!/^\d{5}$/.test(field.value)) {
+                    field.classList.add("invalid");
+                    allValid = false;
+                }
+            } else if (field.type === 'tel') {
+                const digits = field.value.replace(/\D/g,'');
+                if (digits.length !== 10) {
+                    field.classList.add("invalid");
+                    allValid = false;
+                }
+            }else {
+                if (!field.checkValidity()) {
+                    field.classList.add("invalid");
+                    allValid = false;
+                }
+            }
+        }
+
+        if (!allValid) {
+            errorBox.textContent = "Please fill out all required fields in this section.";
+            const firstInvalid = stepDiv.querySelector(".invalid");
+            if (firstInvalid) firstInvalid.focus();
+        }
+
+        return allValid;
+    }
+
+    // --- Button handlers ---
+    form.addEventListener("click", function (e) {
+        if (e.target.classList.contains("next-button")) {
+            e.preventDefault();
+            if (validateStep(currentStep)) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        }
+
+        if (e.target.classList.contains("back-button")) {
+            e.preventDefault();
+            currentStep--;
+            showStep(currentStep);
+            errorBox.textContent = "";
+        }
+    });
+
+    // --- Final Submit Handler ---
+    form.addEventListener("submit", function(e) {
+        if (!validateStep(currentStep)) e.preventDefault();
+
+        // Send raw digits for phones
+        phoneFields.forEach(input => {
+            input.value = input.value.replace(/\D/g,'');
+        });
+    });
+
+    showStep(currentStep);
+});
+</script>
     </body>
 </html>

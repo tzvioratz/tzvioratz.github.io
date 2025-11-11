@@ -9,7 +9,7 @@
 
 <body>
     
-    <h1><img src="/TCTcLOGO.png" alt="TCTLOGO">SLEEPAWAY APPLICATION - 2025<img src="/TCTcLOGO.png" alt="TCTLOGO"></h1>
+    <h1><img src="/TCTcLOGO.png" alt="TCTLOGO">SLEEPAWAY APPLICATION - 2025 <img src="/TCTcLOGO.png" alt="TCTLOGO"></h1>
     
     <form id="applicationForm" method="POST" action="https://47dmj2aevf.execute-api.us-east-1.amazonaws.com/submit" novalidate>
         
@@ -29,12 +29,7 @@
                 <h2>Family Information</h2>
                 <div class="inline-third"><label>Last Name <input type="text" name="GeneralInformation_LastName" required /></label></div>
                 <div class="inline-third"><label>Number of Children <input type="number" name="FamilyInformation_NumberOfchildren" required /></label></div>
-                <div class="inline-third"><label>Parents Marital Status<select id="maritalStatus" name="FamilyInformation_maritalStatus" size="1" required>
-                    <option></option>
-                    <option value="Married">Married</option>
-                    <option value="Divorced">Divorced</option>
-                    <option value="Widowed">Widowed</option></select>
-                </label></div>
+                <div class="inline-third"><label>Parents Marital Status<select id="maritalStatus" name="FamilyInformation_maritalStatus" size="1" required><option></option><option value="Married">Married</option><option value="Divorced">Divorced</option><option value="Widowed">Widowed</option></select></label></div>
                 <div class="inline-third"><label>Family Shul <input type="text" name="FamilyInformation_Shul" required /></label></div>
                 <div class="inline-third"><label>Home Phone <input type="tel"  pattern="[0-9]{10}" name="ContactInformation_Phone_HomePhone" required /></label></div>
                 <div class="inline-third"><label>Email  <input type="email" name="ContactInformation_email" required /></label></div>
@@ -74,9 +69,8 @@
 
                 <h2>Home Address</h2>
                 <div class="inline"><label>Address <input type="text" name="ContactInformation_Address_Home_Address" required /></label></div>
-                
-                <div class="inline-third"><label>City <input type="text" name="ContactInformation_Address_home_City" required /></label></div>
-                <div class="inline-third"><label>State <select id="homeState" name="Address_homeState" size="1" required>
+                <div class="inline-third"><label>City <input type="text" name="ContactInformation_Address_Home_City" required /></label></div>
+                <div class="inline-third"><label>State <select id="homeState" name="ontactInformation_Address_home_State" size="1" required>
                 <option></option>
                 <option value="Alabama">Alabama</option>
                 <option value="Alaska">Alaska</option>
@@ -136,8 +130,7 @@
             
             <div class="form-section">
                 
-                <h2>Summer Address</h2>
-                
+                <h2>Summer Address</h2>                
                 <div class="inline"><label>Address <input type="text" name="ContactInformation_Address_Summer_Address" /></label></div>
                 <div class="inline-third"><label>City <input type="text" name="ContactInformation_Address_Summer_City"  /></label></div>
                 <div class="inline-third"><label>State <select id="SummerState" name="ContactInformation_Address_Summer_State" size="1" >
@@ -217,11 +210,10 @@
             
             <div class="form-section">
                 
-                <label>Applying For:</label>
-                <select name="GeneralInformation_Half" required><option value="">Select</option>
+                <div class="inline"><label>Applying For:<select name="GeneralInformation_Half" required><option value="">Select</option>
                     <option value="1st Trip">1st Trip</option>
                     <option value="2nd Trip">2nd Trip</option>
-                    <option value="Full Summer">Full Summer</option></select>
+                <option value="Full Summer">Full Summer</option></select></label></div>
                 
                 
                 <div class="inline-third"><label>Camper's First Name <input type="text" name="GeneralInformation_FirstName" placeholder="Name he would like to be called" required /></label></div>
@@ -236,7 +228,7 @@
                 <div class="inline-third"><label>Rebbe's Name <input type="text" name="YeshivaInformation_Rebbe" required /></label></div>
                 <div class="inline-third"><label>Rebbe's Phone<input type="tel" pattern="[0-9]{10}" name="YeshivaInformation_RebbePhone" required /></label></div>
                 
-                <label>Camper's Learning Level</label>
+                <div class="inline-third"><label>Camper's Learning Level</label>
                 <select name="YeshivaInformation_LearningLevel" required><option value="">Select</option>
                 <option value="גמ' מפרשים">גמ' מפרשים</option>
                 <option value="גמ' תוס'">גמ' תוס'</option>
@@ -245,8 +237,7 @@
                 <option value="משניות">משניות</option>
                 <option value="התחלת משניות">התחלת משניות</option>
                 <option value="חומש רש''י">חומש רש''י</option>
-                <option value="חומש">חומש</option></select>
-                
+                <option value="חומש">חומש</option></select></div>
                 
                 <div class="inline"><label>Private Tutoring Requested (Subjects) <input type="text" name="YeshivaInformation_Tutoring" /></label></div>
             
@@ -262,7 +253,7 @@
                 
                 <div class="inline"><label>Child Spent Last Summer At <input type="text" name="GeneralInformation_LastSummer" /></label></div>
                 
-                <label>Special Instructions (Medical, Allergies, Bedwetting or other) <textarea name="GeneralInformation_SpecialInstructions"></textarea></label>
+                <div class="inline"><label>Special Instructions (Medical, Allergies, Bedwetting or other) <textarea name="GeneralInformation_SpecialInstructions"></textarea></label></div>
                
             </div>
             
@@ -299,7 +290,7 @@
 
             <div class="form-section">
                 <h2>Credit Card Information (Optional)</h2>
-                <p>A processing fee of **$40 per half** - **$80 for whole summer** will be added if paying by credit card.<br>A 2% fee applies for partial payments or credits to your credit card.</p>
+                <p>A processing fee of 40 per half - $80 for whole summer will be added if paying by credit card.<br>A 2% fee applies for partial payments or credits to your credit card.</p>
                 
                 <div class="inline-third"><label>Card Type <select name="CreditCard_Type" ><option value="">Select</option><option value="VISA">VISA</option><option value="MASTERCARD">MASTERCARD</option></select></label></div>
                 <div class="inline"></div>
@@ -312,8 +303,8 @@
             </div>
 
             <div class="nav-buttons">
-                <button type="button" class="back-button">Back (Camper Info)</button>
-                <button type="button" class="next-button">Next (Authorization)</button>
+                <button type="button" class="back-button">Back </button>
+                <button type="button" class="next-button">Next</button>
             </div>
         </div>
         
@@ -365,7 +356,7 @@
             </div>
 
             <div class="nav-buttons">
-                <button type="button" class="back-button">Back (Fees & Payment)</button>
+                <button type="button" class="back-button">Back</button>
             </div>
             <button type="submit">Submit Application</button>
         </div>
